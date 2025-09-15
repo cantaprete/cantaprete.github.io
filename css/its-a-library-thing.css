@@ -23,7 +23,7 @@ body {
     font-family: var(--base-font-stack);
     color: var(--fg-color);
     background-color: var(--bg-color);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 a {
@@ -39,30 +39,38 @@ main {
 }
 
 #bio {
-    width: 200px;
+    /* width: 12.5rem; */
     padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 #bio #nome {
     font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
 
 #bio p {
     margin-block-start: .6rem;
     margin-block-end: .6rem;
+
 }
 
 .progetto {
     filter: grayscale(0%) opacity(100%) blur(0);
     transition: var(--animation-speed) filter var(--animation-mode);
+    /* padding: .4rem;
+    background-color: silver;
+    border: 1px solid black; */
 }
 
 .progetto img {
-    border-radius: 2px;
+    /* border-radius: 2px; */
 }
 
 .progetto[data-tipo=libro] img {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
     transition: var(--animation-speed) filter var(--animation-mode);
 }
 
