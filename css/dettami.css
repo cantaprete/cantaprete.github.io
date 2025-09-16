@@ -2,6 +2,7 @@ body {
     margin: 0;
     background-image: url(/img/dettami/g50.png);
     image-rendering: pixelated;
+    min-height: 100%;
 }
 
 article {
