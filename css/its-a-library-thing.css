@@ -80,6 +80,10 @@ footer {
     text-align: center;
 }
 
+footer #gpg {
+		font-family: monospace;
+}
+
 #selettore {
     font-size: .9rem;
     margin: 2rem 0;
