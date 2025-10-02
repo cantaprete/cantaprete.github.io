@@ -82,6 +82,8 @@ footer {
 
 footer #gpg {
 		font-family: monospace;
+		font-size: smaller;
+		letter-spacing: 1px;
 }
 
 #selettore {
