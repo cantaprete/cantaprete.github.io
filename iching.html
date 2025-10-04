@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="it" dir="ltr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>I Ching</title>
+		<meta name="description" content="Tira le monetine. (non è un simulatore di Tangentopoli.)">
+		<meta name="keywords" content="Jacopo Donati, I Ching, iching, Yijing">
+		<meta name="author" content="Jacopo Donati">
+		<link rel="stylesheet" href="/css/throw_those_coins.css">
+		<script src="/js/iching.js"></script>
+		<script src="/js/old_sage.js"></script>
+	</head>
+
+	<body id="iching">
+		<div id="container">
+			<div id="hex" class="panel">
+				<div id="line-1" class="line"></div>
+				<div id="line-2" class="line"></div>
+				<div id="line-3" class="line"></div>
+				<div id="line-4" class="line"></div>
+				<div id="line-5" class="line"></div>
+				<div id="line-6" class="line"></div>
+			</div>
+			<div class="panel">
+				<div id="control">
+					<input type="button" class="btn btn-default" value="Lancia" id="throw">
+					<input type="button" class="btn" value="Reimposta" id="reset">
+				</div>
+				<div id="legend" class="hidden">
+					<hr>
+					<div id="response">
+						<div id="from" class="response_hex">
+							<div class="number"></div>
+							<div class="hex"></div>
+							<div class="name"></div>
+						</div>
+						<div id="arrow" class="hidden">»</div>
+						<div id="to" class="response_hex">
+							<div class="number"></div>
+							<div class="hex"></div>
+							<div class="name"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
