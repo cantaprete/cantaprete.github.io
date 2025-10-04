@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: Chicago;
-  src: url("/fonts/chicago.woff") format("woff");
   src: url("/fonts/chicago.woff2") format("woff2");
+  font-display: swap;
 }
 
 body {
