@@ -1,0 +1,51 @@
+:root {
+    --foreground: black;
+    --backgound: white;
+    --lang-en: aliceblue;
+    --lang-it: antiquewhite;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground: white;
+        --backgound: black;
+        --lang-en: steelblue;
+        --lang-it: indianred;
+    }
+}
+
+html {
+    font-size: 24px;
+}
+
+body {
+    background-color: var(--backgound);
+    color: var(--foreground);
+    font-family: Arial, sans-serif;
+}
+
+article {
+    max-width: 40rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    font-size: .9rem;
+}
+
+span[data-curr-lang=en] {
+    background-color: var(--lang-en);
+}
+
+span[data-curr-lang=it] {
+    background-color: var(--lang-it);
+}
+
+#footnotes {
+    font-size: .8rem;
+}
