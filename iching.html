@@ -2,55 +2,64 @@
 
 <html lang="it" dir="ltr">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>I Ching</title>
-		<meta name="description" content="Tira le monetine. (non è un simulatore di Tangentopoli.)">
-		<meta name="keywords" content="Jacopo Donati, I Ching, iching, Yijing">
-		<meta name="author" content="Jacopo Donati">
-		<link rel="apple-touch-icon" href="/img/icone/apple-touch-icon.png">
-		<link rel="icon" href="/img/icone/favicon-16x16.png" sizes="16x16">
-		<link rel="icon" href="/img/icone/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" href="/img/icone/favicon-192x192.png" sizes="192x192">
-		<link rel="icon" href="/img/icone/favicon-512x512.png" sizes="512x512">
-		<link rel="stylesheet" href="/css/throw_those_coins.css">
-		<script src="/js/iching.js"></script>
-		<script src="/js/old_sage.js"></script>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>I Ching</title>
+	<meta name="description" content="Tira le monetine. (non è un simulatore di Tangentopoli.)">
+	<meta name="keywords" content="Jacopo Donati, I Ching, iching, Yijing">
+	<meta name="author" content="Jacopo Donati">
+	<link rel="icon" href="/favicon.ico" sizes="48x48">
+	<link rel="icon" href="/img/icone/yi.svg" sizes="any" type="image/svg+xml">
+	<link rel="apple-touch-icon" href="/img/icone/apple-touch-icon.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<!-- <link rel="apple-touch-icon" href="/img/icone/apple-touch-icon.png">
+	<link rel="icon" href="/img/icone/favicon-16x16-light.png" sizes="16x16" media="(prefers-color-scheme: light)">
+	<link rel="icon" href="/img/icone/favicon-32x32-light.png" sizes="32x32" media="(prefers-color-scheme: light)">
+	<link rel="icon" href="/img/icone/favicon-192x192-light.png" sizes="192x192"media="(prefers-color-scheme: light)">
+	<link rel="icon" href="/img/icone/favicon-512x512-light.png" sizes="512x512"media="(prefers-color-scheme: light)">
+	<link rel="icon" href="/img/icone/favicon-16x16-dark.png" sizes="16x16" media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="/img/icone/favicon-32x32-dark.png" sizes="32x32" media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="/img/icone/favicon-192x192-dark.png" sizes="192x192"media="(prefers-color-scheme: dark)">
+	<link rel="icon" href="/img/icone/favicon-512x512-dark.png" sizes="512x512"media="(prefers-color-scheme: dark)"> -->
+	<link rel="stylesheet" href="/css/throw_those_coins.css">
+	<script src="/js/iching.js"></script>
+	<script src="/js/old_sage.js"></script>
+</head>
 
-	<body id="iching">
-		<div id="container">
-			<div id="hex" class="panel">
-				<div id="line-1" class="line"></div>
-				<div id="line-2" class="line"></div>
-				<div id="line-3" class="line"></div>
-				<div id="line-4" class="line"></div>
-				<div id="line-5" class="line"></div>
-				<div id="line-6" class="line"></div>
+<body id="iching">
+	<div id="container">
+		<div id="hex" class="panel">
+			<div id="line-1" class="line"></div>
+			<div id="line-2" class="line"></div>
+			<div id="line-3" class="line"></div>
+			<div id="line-4" class="line"></div>
+			<div id="line-5" class="line"></div>
+			<div id="line-6" class="line"></div>
+		</div>
+		<div class="panel">
+			<div id="control">
+				<input type="button" class="btn btn-default" value="Lancia" id="throw">
+				<input type="button" class="btn" value="Reimposta" id="reset">
 			</div>
-			<div class="panel">
-				<div id="control">
-					<input type="button" class="btn btn-default" value="Lancia" id="throw">
-					<input type="button" class="btn" value="Reimposta" id="reset">
-				</div>
-				<div id="legend" class="hidden">
-					<hr>
-					<div id="response">
-						<div id="from" class="response_hex">
-							<div class="number"></div>
-							<div class="hex"></div>
-							<div class="name"></div>
-						</div>
-						<div id="arrow" class="hidden">»</div>
-						<div id="to" class="response_hex">
-							<div class="number"></div>
-							<div class="hex"></div>
-							<div class="name"></div>
-						</div>
+			<div id="legend" class="hidden">
+				<hr>
+				<div id="response">
+					<div id="from" class="response_hex">
+						<div class="number"></div>
+						<div class="hex"></div>
+						<div class="name"></div>
+					</div>
+					<div id="arrow" class="hidden">»</div>
+					<div id="to" class="response_hex">
+						<div class="number"></div>
+						<div class="hex"></div>
+						<div class="name"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</body>
+	</div>
+</body>
+
 </html>
