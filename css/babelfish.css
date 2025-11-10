@@ -28,14 +28,9 @@ article {
     max-width: 40rem;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.date {
-    font-size: .9rem;
+.title {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 span[data-curr-lang=en] {
