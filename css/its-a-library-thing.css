@@ -3,7 +3,7 @@
     --fg-color: #000;
     --bg-color: #fff;
     --link-color: #3171a5;
-    --animation-speed: .2s;
+    --animation-speed: .15s;
     --animation-mode: linear;
     --menu-color: #ffd500;
 }
@@ -147,6 +147,11 @@ label {
     display: none;
 }
 
+.annebbiabile {
+    transition: var(--animation-speed) filter var(--animation-mode);
+}
+
 .annebbiato {
     filter: blur(5px);
+    transition: var(--animation-speed) filter var(--animation-mode);
 }
