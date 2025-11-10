@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.annebbiabile').forEach(elemento => {
             elemento.classList.toggle('annebbiato')
         })
-        document.querySelectorAll('a').forEach(elemento => {
+        document.querySelectorAll('a:not(.menu-link)').forEach(elemento => {
             elemento.classList.toggle('non-cliccabile')
         })
 

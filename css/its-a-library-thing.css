@@ -152,7 +152,7 @@ label {
 }
 
 .annebbiato {
-    filter: blur(5px);
+    filter: blur(5px) grayscale(100%);
     transition: var(--animation-speed) filter var(--animation-mode);
 }
 
