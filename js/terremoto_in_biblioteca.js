@@ -1,62 +1,77 @@
-const mainTag = document.querySelector('main');
-const progetti = mainTag.querySelectorAll('div');
-const resetButton = document.querySelector('#reset');
-const selettori = document.querySelectorAll('select');
-var filtro = {
-    'tipo': 'all',
-    'target': 'all',
-    'genere': 'all',
-    'ruolo': 'all'
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const mainTag = document.querySelector('main')
+    const progetti = mainTag.querySelectorAll('div')
+    const resetButton = document.querySelector('#reset')
+    const selettori = document.querySelectorAll('select')
+    var filtro = {
+        'tipo': 'all',
+        'target': 'all',
+        'genere': 'all',
+        'ruolo': 'all'
+    }
 
-function riordinaCasualmente() {
-    const progettiArray = Array.from(progetti);
+    function riordinaCasualmente() {
+        const progettiArray = Array.from(progetti)
 
-    progettiArray.sort(() => Math.random() - 0.5);
+        progettiArray.sort(() => Math.random() - 0.5)
 
-    mainTag.innerHTML = '';
-    progettiArray.forEach(progetto => mainTag.appendChild(progetto));
-}
+        mainTag.innerHTML = ''
+        progettiArray.forEach(progetto => mainTag.appendChild(progetto))
+    }
 
-function filtra() {
-    ultimiFiltrati = document.querySelectorAll('.progetto.secondo-piano');
-    ultimiFiltrati.forEach(progetto => {
-        progetto.classList.remove('secondo-piano');
-    });
+    function filtra() {
+        ultimiFiltrati = document.querySelectorAll('.progetto.secondo-piano')
+        ultimiFiltrati.forEach(progetto => {
+            progetto.classList.remove('secondo-piano')
+        })
 
-    resetButton.disabled = true;
-    
-    for (const key in filtro) {
-        if (filtro[key] != 'all') {
-            resetButton.disabled = false;
-            const daFiltrare = document.querySelectorAll(`.progetto:not([data-${key}=${filtro[key]}])`);
-            daFiltrare.forEach(progetto => {
-                progetto.classList.add('secondo-piano');
-            });
+        resetButton.disabled = true
+
+        for (const key in filtro) {
+            if (filtro[key] != 'all') {
+                resetButton.disabled = false
+                const daFiltrare = document.querySelectorAll(`.progetto:not([data-${key}=${filtro[key]}])`)
+                daFiltrare.forEach(progetto => {
+                    progetto.classList.add('secondo-piano')
+                })
+            }
         }
+
     }
 
-}
+    function resetta() {
+        selettori.forEach(selettore => {
+            selettore.value = 'all'
+        })
+        for (const key in filtro) {
+            filtro[key] = 'all'
+        }
+        filtra()
+    }
 
-function resetta() {
+    function impostaFiltro() {
+        filtro[this.id] = this.value
+
+        filtra()
+    }
+
     selettori.forEach(selettore => {
-        selettore.value = 'all';
-    });
-    for (const key in filtro) {
-        filtro[key] = 'all';
-    }
-    filtra();
-}
+        selettore.addEventListener('change', impostaFiltro)
+    })
 
-function impostaFiltro() {
-    filtro[this.id] = this.value;
+    resetButton.addEventListener('click', resetta)
+    // document.addEventListener('DOMContentLoaded', riordinaCasualmente)
+    let fireBurger = document.querySelector('#menu #icona')
+    fireBurger.addEventListener('click', () => {
+        document.querySelector('#menu ul').classList.toggle('nascosto')
+        document.querySelectorAll('.annebbiabile').forEach(elemento => {
+            elemento.classList.toggle('annebbiato')
+        })
 
-    filtra();
-}
-
-selettori.forEach(selettore => {
-    selettore.addEventListener('change', impostaFiltro);
-});
-
-resetButton.addEventListener('click', resetta);
-// document.addEventListener('DOMContentLoaded', riordinaCasualmente);
+        if (fireBurger.textContent === '☲') {
+            fireBurger.textContent = '☵'
+        } else {
+            fireBurger.textContent = '☲'
+        }
+    })
+})
