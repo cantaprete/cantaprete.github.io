@@ -67,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.annebbiabile').forEach(elemento => {
             elemento.classList.toggle('annebbiato')
         })
+        document.querySelectorAll('a').forEach(elemento => {
+            elemento.classList.toggle('non-cliccabile')
+        })
 
         if (fireBurger.textContent === '☲') {
             fireBurger.textContent = '☵'
