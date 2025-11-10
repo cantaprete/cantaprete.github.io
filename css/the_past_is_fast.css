@@ -33,6 +33,10 @@ main {
     justify-content: space-between;
 }
 
+label::after {
+    content: ":";
+}
+
 input {
     background-color: var(--base);
     font-family: Jacquard, serif;
@@ -52,4 +56,17 @@ textarea {
     width: 100%;
     border-style: inset;
     resize: none;
+}
+
+@media (max-width: 550px) {
+    #input div {
+        flex-direction: column;
+    }
+
+    label {
+        text-align: center;
+    }
+    label::after {
+        content: "";
+    }
 }
