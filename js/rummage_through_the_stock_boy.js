@@ -32,31 +32,32 @@ function isLeapYear(year) {
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
 }
 
+function clearOutput() {
+    let outputArea = document.querySelector('#output')
+    outputArea.innerHTML = ''
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    fixTextarea();
     let nextYear = new Date(new Date().setFullYear(new Date().getFullYear() + 1))
     let chosenYear = document.querySelector('#anno')
     chosenYear.value = nextYear.getFullYear()
-    
+
     let submit = document.querySelector('#trova')
     submit.addEventListener('click', () => {
-        let outputArea = document.querySelector('#lista')
-        outputArea.value = ''
+        clearOutput()
+        let outputArea = document.querySelector('#output')
         const cutYear = document.querySelector('#soglia').value
         const targetYear = chosenYear.value
-        
+
         for (let year = cutYear; year < targetYear; year++) {
             if (sameCalendar(year, targetYear)) {
-                outputArea.value += year + '\r\n'
+                let newYear = document.createElement('div')
+                newYear.textContent = year
+                outputArea.appendChild(newYear)
             }
         }
     })
+
+    document.querySelector('#anno').addEventListener('change', clearOutput)
+    document.querySelector('#soglia').addEventListener('change', clearOutput)
 })
-
-function fixTextarea() {
-    let textarea = document.querySelector('#lista')
-    let height = window.innerHeight - textarea.getBoundingClientRect().top
-    textarea.style.height = (height - 20) + 'px'
-}
-
-window.addEventListener('resize', fixTextarea)

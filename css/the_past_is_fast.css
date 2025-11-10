@@ -7,6 +7,8 @@
 :root {
     --base: #c2b3aa;
     --dark: #a69991;
+    --accent-1: #5b90a4;
+    --accent-2: #e2ab79;
     --font-size: 30px;
 }
 
@@ -49,13 +51,21 @@ input[type=submit] {
     border-style: outset;
 }
 
-textarea {
-    background-color: var(--dark);
-    font-family: Jacquard, serif;
-    font-size: var(--font-size);
-    width: 100%;
-    border-style: inset;
-    resize: none;
+#output {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+#output div {
+    padding: .4rem 1rem;
+    background-color: var(--accent-2);
+    border: 1px outset;
+}
+
+#output div:nth-of-type(odd) {
+    background-color: var(--accent-1);
+    color: #fff;
 }
 
 @media (max-width: 550px) {
