@@ -61,8 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resetButton.addEventListener('click', resetta)
     // document.addEventListener('DOMContentLoaded', riordinaCasualmente)
+
     let fireBurger = document.querySelector('#menu #icona')
-    fireBurger.addEventListener('click', () => {
+
+    function controllaClick(e) {
+        let menu = document.querySelector('#menu ul')
+        if (!menu.contains(e.target) && !fireBurger.contains(e.target)) {
+            azionaMenu()
+        }
+    }
+
+    function azionaMenu() {
         document.querySelector('#menu ul').classList.toggle('nascosto')
         document.querySelectorAll('.annebbiabile').forEach(elemento => {
             elemento.classList.toggle('annebbiato')
@@ -72,9 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         if (fireBurger.textContent === '☲') {
+            document.addEventListener('click', controllaClick)
             fireBurger.textContent = '☵'
         } else {
+            document.removeEventListener('click', controllaClick)
             fireBurger.textContent = '☲'
         }
-    })
+    }
+
+    fireBurger.addEventListener('click', azionaMenu)
 })
