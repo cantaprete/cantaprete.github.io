@@ -114,6 +114,14 @@ footer {
     text-align: center;
 }
 
+footer svg {
+    width: 2rem;
+}
+
+svg path {
+    fill: var(--fg-color);
+}
+
 footer #gpg {
     font-family: monospace;
     font-size: smaller;
