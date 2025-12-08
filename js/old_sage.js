@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (fir_hex !== sec_hex) {
       legend.querySelector('#arrow').classList.remove('hidden')
+      legend.querySelector('#to').classList.remove('hidden')
 
       let to = legend.querySelector('#to')
       to.querySelector('.number').textContent = end.number 
@@ -116,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       node.textContent = ''
     })
     legend.querySelector('#arrow').classList = 'hidden'
+    legend.querySelector('#to').classList.add('hidden')
   }
 
   let reset_btn = document.querySelector('#reset')
