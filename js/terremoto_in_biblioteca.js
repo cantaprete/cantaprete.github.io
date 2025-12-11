@@ -1,6 +1,27 @@
+function riordinaCasualmente() {
+    const mainTag = document.querySelector('main')
+    const progetti = mainTag.querySelectorAll('div')
+    const progettiArray = Array.from(progetti)
+
+    progettiArray.sort(() => Math.random() - 0.5)
+
+    mainTag.innerHTML = ''
+    progettiArray.forEach(progetto => mainTag.appendChild(progetto))
+}
+
+// document.addEventListener('DOMContentLoaded', riordinaCasualmente)
+
 document.addEventListener('DOMContentLoaded', () => {
     const mainTag = document.querySelector('main')
     const progetti = mainTag.querySelectorAll('div')
+
+    progetti.forEach(progetto => {
+        const img = progetto.querySelector('img')
+        const width = progetto.dataset.pagine / 22
+        const baseStyle = "#32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px, "
+        img.style.boxShadow = baseStyle + '0px ' + width + 'px 5px #0000004d'
+    });
+
     const resetButton = document.querySelector('#reset')
     const selettori = document.querySelectorAll('select')
     var filtro = {
@@ -8,15 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'target': 'all',
         'genere': 'all',
         'ruolo': 'all'
-    }
-
-    function riordinaCasualmente() {
-        const progettiArray = Array.from(progetti)
-
-        progettiArray.sort(() => Math.random() - 0.5)
-
-        mainTag.innerHTML = ''
-        progettiArray.forEach(progetto => mainTag.appendChild(progetto))
     }
 
     function filtra() {
@@ -60,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     resetButton.addEventListener('click', resetta)
-    document.addEventListener('DOMContentLoaded', riordinaCasualmente)
 
     let fireBurger = document.querySelector('#menu #icona')
 
@@ -91,3 +102,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fireBurger.addEventListener('click', azionaMenu)
 })
+

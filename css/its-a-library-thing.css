@@ -1,6 +1,6 @@
 :root {
     --base-font-stack: sans-serif;
-    --fg-color: #000;
+    --fg-color: #202020;
     --bg-color: #fdfcfc;
     --link-color: #3171a5;
     --animation-speed: .15s;
@@ -11,14 +11,14 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --fg-color: #fdfcfc;
-        --bg-color: #000;
+        --bg-color: #202020;
         --link-color: #f09262;
         --menu-color: #b98502;
     }
 
-    #newsletter img {
+    /* #newsletter img {
         filter: invert();
-    }
+    } */
 }
 
 body {
@@ -101,7 +101,7 @@ main {
 
 .progetto img {
     border-radius: 2px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: #32325d40 0px 2px 5px, #0000004d 0px 1px 3px;
 }
 
 .progetto[data-tipo=libro] img {
