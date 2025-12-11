@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function filtra() {
-        ultimiFiltrati = document.querySelectorAll('.progetto.secondo-piano')
+        let ultimiFiltrati = document.querySelectorAll('.progetto.secondo-piano')
         ultimiFiltrati.forEach(progetto => {
             progetto.classList.remove('secondo-piano')
         })
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     resetButton.addEventListener('click', resetta)
-    // document.addEventListener('DOMContentLoaded', riordinaCasualmente)
+    document.addEventListener('DOMContentLoaded', riordinaCasualmente)
 
     let fireBurger = document.querySelector('#menu #icona')
 

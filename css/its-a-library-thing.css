@@ -1,7 +1,7 @@
 :root {
     --base-font-stack: sans-serif;
     --fg-color: #000;
-    --bg-color: #fff;
+    --bg-color: #fdfcfc;
     --link-color: #3171a5;
     --animation-speed: .15s;
     --animation-mode: linear;
@@ -10,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --fg-color: #fff;
+        --fg-color: #fdfcfc;
         --bg-color: #000;
         --link-color: #f09262;
         --menu-color: #b98502;
@@ -99,9 +99,10 @@ main {
     border: 1px solid black; */
 }
 
-/* .progetto img {
+.progetto img {
     border-radius: 2px;
-} */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
 .progetto[data-tipo=libro] img {
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
@@ -145,7 +146,7 @@ footer #gpg {
 
 .secondo-piano img {
     box-shadow: none;
-    transition: var(--animation-speed) filter var(--animation-mode),
+    transition: var(--animation-speed) filter var(--animation-mode);
 }
 
 label {
