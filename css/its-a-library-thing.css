@@ -1,5 +1,11 @@
+@font-face {
+    font-family: Shippori;
+    src: url("/fonts/shp-reg.woff2") format("woff2");
+    font-display: swap;
+}
+
 :root {
-    --base-font-stack: sans-serif;
+    --base-font-stack: Shippori, sans-serif;
     --fg-color: #202020;
     --bg-color: #fdfcfc;
     --link-color: #3171a5;
@@ -54,6 +60,7 @@ header {
     position: absolute;
     right: 0;
     z-index: 1;
+    border-radius: 2rem;
 }
 
 #menu li {
@@ -79,7 +86,7 @@ main {
 }
 
 #bio #nome {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 2rem;
     text-transform: uppercase;
     /* letter-spacing: .1rem; */
