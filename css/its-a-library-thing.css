@@ -5,9 +5,11 @@
 }
 
 :root {
+    --light-color: #f0eee7;
+    --dark-color: #322713;
     --base-font-stack: Shippori, sans-serif;
-    --fg-color: #202020;
-    --bg-color: #fdfcfc;
+    --fg-color: var(--dark-color);
+    --bg-color: var(--light-color);
     --link-color: #3171a5;
     --animation-speed: .15s;
     --animation-mode: linear;
@@ -16,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --fg-color: #fdfcfc;
-        --bg-color: #202020;
+        --fg-color: var(--light-color);
+        --bg-color: var(--dark-color);
         --link-color: #f09262;
         --menu-color: #b98502;
     }
