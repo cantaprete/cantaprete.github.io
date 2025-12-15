@@ -6,7 +6,7 @@
 
 :root {
     --light-color: #f0eee7;
-    --dark-color: #322713;
+    --dark-color: #131832;
     --base-font-stack: Shippori, sans-serif;
     --fg-color: var(--dark-color);
     --bg-color: var(--light-color);
@@ -56,7 +56,7 @@ header {
 
 #menu ul {
     padding: 2rem;
-    margin: 0;
+    margin: 0 1rem 0 0;
     background-color: var(--menu-color);
     list-style-type: none;
     position: absolute;
@@ -91,7 +91,7 @@ main {
     /* font-weight: bold; */
     font-size: 2rem;
     text-transform: uppercase;
-    /* letter-spacing: .1rem; */
+    letter-spacing: .1rem;
 }
 
 #bio p {
