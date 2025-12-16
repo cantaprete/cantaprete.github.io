@@ -14,6 +14,7 @@
     --animation-speed: .15s;
     --animation-mode: linear;
     --menu-color: #ffd500;
+    --menu-radius: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -55,18 +56,40 @@ header {
 }
 
 #menu ul {
-    padding: 2rem;
-    margin: 0 1rem 0 0;
-    background-color: var(--menu-color);
+    margin: 0 1rem;
     list-style-type: none;
     position: absolute;
     right: 0;
     z-index: 1;
-    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #menu li {
-    margin: 1rem;
+    background-color: var(--menu-color);
+    padding: 1rem 1.6rem;
+    max-width: fit-content;
+    /* border-top-left-radius: var(--menu-radius);
+    border-bottom-left-radius: var(--menu-radius); */
+}
+
+.bottom-round {
+    border-bottom-left-radius: var(--menu-radius);
+}
+
+.top-round {
+    border-top-left-radius: var(--menu-radius);
+}
+
+#menu li:first-of-type {
+    border-top-right-radius: var(--menu-radius);
+    border-top-left-radius: var(--menu-radius);
+}
+
+#menu li:last-of-type {
+    border-bottom-right-radius: var(--menu-radius);
+    border-bottom-left-radius: var(--menu-radius);
 }
 
 a {
@@ -103,9 +126,6 @@ main {
 .progetto {
     filter: grayscale(0%) opacity(100%) blur(0);
     transition: var(--animation-speed) filter var(--animation-mode);
-    /* padding: .4rem;
-    background-color: silver;
-    border: 1px solid black; */
 }
 
 .progetto img {
@@ -163,7 +183,7 @@ label {
 }
 
 .nascosto {
-    display: none;
+    display: none !important;
 }
 
 .annebbiabile {
