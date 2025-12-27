@@ -17,24 +17,23 @@
     --menu-radius: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --fg-color: var(--light-color);
-        --bg-color: var(--dark-color);
-        --link-color: #f09262;
-        --menu-color: #b98502;
-    }
-
-    /* #newsletter img {
-        filter: invert();
-    } */
-}
-
 body {
     font-family: var(--base-font-stack);
     color: var(--fg-color);
     background-color: var(--bg-color);
     font-size: 18px;
+}
+
+#noise {
+    background-image: url(/img/home/noise.svg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    mix-blend-mode: darken;
+    opacity: .4;
+    z-index: -2;
 }
 
 header {
@@ -197,4 +196,17 @@ label {
 
 .non-cliccabile {
     pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: var(--light-color);
+        --bg-color: var(--dark-color);
+        --link-color: #f09262;
+        --menu-color: #b98502;
+    }
+
+    #noise {
+        mix-blend-mode: lighten;
+    }
 }
