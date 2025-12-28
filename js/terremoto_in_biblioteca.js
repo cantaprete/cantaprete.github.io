@@ -1,13 +1,13 @@
-function riordinaCasualmente() {
-    const mainTag = document.querySelector('main')
-    const progetti = mainTag.querySelectorAll('div')
-    const progettiArray = Array.from(progetti)
+// function riordinaCasualmente() {
+//     const mainTag = document.querySelector('main')
+//     const progetti = mainTag.querySelectorAll('div')
+//     const progettiArray = Array.from(progetti)
 
-    progettiArray.sort(() => Math.random() - 0.5)
+//     progettiArray.sort(() => Math.random() - 0.5)
 
-    mainTag.innerHTML = ''
-    progettiArray.forEach(progetto => mainTag.appendChild(progetto))
-}
+//     mainTag.innerHTML = ''
+//     progettiArray.forEach(progetto => mainTag.appendChild(progetto))
+// }
 
 // document.addEventListener('DOMContentLoaded', riordinaCasualmente)
 
