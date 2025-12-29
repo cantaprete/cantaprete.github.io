@@ -69,8 +69,7 @@ header {
     background-color: var(--menu-color);
     padding: 1rem 1.6rem;
     max-width: fit-content;
-    /* border-top-left-radius: var(--menu-radius);
-    border-bottom-left-radius: var(--menu-radius); */
+    text-align: right;
 }
 
 .bottom-round {
