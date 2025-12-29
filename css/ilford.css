@@ -32,6 +32,8 @@
     --fg-color: var(--dark-color);
     --bg-color: var(--light-color);
     --link: #285583;
+    --max-width: 40rem;
+    --margin: 4rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,7 +55,8 @@ a {
 }
 
 article {
-    max-width: 40rem;
+    max-width: var(--max-width);
+    margin-left: var(--margin);
 }
 
 header h1 {
@@ -69,6 +72,7 @@ h5,
 h6 {
     text-transform: uppercase;
     margin-bottom: 0;
+    margin-top: 2.5rem;
     font-weight: 900;
 }
 
@@ -128,4 +132,10 @@ form input {
 
 form input:invalid {
     border: 2px dashed red;
+}
+
+@media (max-width: 40rem) {
+    article {
+        margin-left: 0;
+    }
 }
