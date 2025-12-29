@@ -87,6 +87,7 @@ math {
 
 figure {
     text-align: center;
+    margin: 0;
 }
 
 figcaption {
@@ -95,6 +96,10 @@ figcaption {
 
 svg path {
     fill: var(--fg-color);
+}
+
+svg {
+    max-width: 80vw;
 }
 
 footer {
