@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Futura;
+    src: url("/fonts/fut-reg.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url("/fonts/fut-ita.woff2") format("woff2");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url("/fonts/fut-bld.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Futura;
+    src: url("/fonts/fut-xtr.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 900;
+}
+
+:root {
+    --light-color: #f8f8f7;
+    --dark-color: #202020;
+    --base-font-stack: Futura, 'Gill Sans', 'Gill Sans MT', sans-serif;
+    --fg-color: var(--dark-color);
+    --bg-color: var(--light-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg-color: var(--light-color);
+        --bg-color: var(--dark-color);
+    }
+}
+
+body {
+    font-family: var(--base-font-stack);
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+article {
+    max-width: 40rem;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 900;
+}
+
+h1+p,
+h2+p,
+h3+p,
+h4+p,
+h5+p,
+h6+p {
+    margin-top: 0;
+}
+
+h4,
+h5,
+h6 {
+    text-transform: none;
+}
+
+math {
+    margin-left: 2rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-size: .8rem;
+}
+
+svg path {
+    fill: var(--fg-color);
+}
+
+footer {
+    font-size: .8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label,
+dt {
+    font-weight: bold;
+}
+
+form input {
+    margin-bottom: 1rem;
+}
+
+form input:invalid {
+    border: 2px dashed red;
+}
