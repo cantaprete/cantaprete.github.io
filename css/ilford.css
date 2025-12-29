@@ -31,12 +31,14 @@
     --base-font-stack: Futura, 'Gill Sans', 'Gill Sans MT', sans-serif;
     --fg-color: var(--dark-color);
     --bg-color: var(--light-color);
+    --link: #285583;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --fg-color: var(--light-color);
         --bg-color: var(--dark-color);
+        --link: #e68c42;
     }
 }
 
@@ -44,6 +46,10 @@ body {
     font-family: var(--base-font-stack);
     background-color: var(--bg-color);
     color: var(--fg-color);
+}
+
+a {
+    color: var(--link);
 }
 
 article {
