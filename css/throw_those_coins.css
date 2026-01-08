@@ -15,6 +15,7 @@ body {
   image-rendering: pixelated;
   font-family: Chicago, monospace;
   border-top: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary);
   margin: 0;
   padding: 10px;
 }
