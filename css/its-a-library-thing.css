@@ -42,10 +42,24 @@ header {
 }
 
 #menu #icona {
-    font-size: 4rem;
+    font-size: 3.4rem;
     cursor: pointer;
     text-align: right;
     margin: 0 1rem;
+    font-family: monospace;
+    position: relative;
+}
+
+#menu #icona #menu-open {
+    position: absolute;
+    right: 0;
+    transform: rotateX(0deg);
+    transition: var(--animation-speed) transform var(--animation-mode);
+}
+
+#menu #icona #menu-open.hidden {
+    transform: rotateX(90deg);
+    transition: var(--animation-speed) transform var(--animation-mode);
 }
 
 #menu ul {
@@ -103,7 +117,7 @@ main {
 }
 
 #bio #nome {
-    /* font-weight: bold; */
+    font-weight: 540;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .4rem;

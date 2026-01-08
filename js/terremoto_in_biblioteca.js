@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
             elemento.classList.toggle('non-cliccabile')
         })
 
-        if (fireBurger.textContent === '☲') {
-            document.addEventListener('click', controllaClick)
-            fireBurger.textContent = '☵'
-        } else {
+        if (fireBurger.querySelector('#menu-open').classList.contains('hidden')) {
             document.removeEventListener('click', controllaClick)
-            fireBurger.textContent = '☲'
+        } else {
+            document.addEventListener('click', controllaClick)
         }
+        
+        fireBurger.querySelector('#menu-open').classList.toggle('hidden')
     }
 
     fireBurger.addEventListener('click', azionaMenu)
