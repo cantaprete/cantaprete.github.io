@@ -1,13 +1,7 @@
-@font-face {
-    font-family: Shippori;
-    src: url("/fonts/shp-reg.woff2") format("woff2");
-    font-display: swap;
-}
-
 :root {
     --light-color: #f0eee7;
     --dark-color: #131832;
-    --base-font-stack: Shippori, sans-serif;
+    --base-font-stack: system-ui, sans-serif;
     --fg-color: var(--dark-color);
     --bg-color: var(--light-color);
     --link-color: #3171a5;
@@ -112,7 +106,9 @@ main {
     /* font-weight: bold; */
     font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: .4rem;
+    font-stretch: 140%;
+    font-width: 140%;
 }
 
 #bio p {
