@@ -42,10 +42,10 @@ header {
 }
 
 #menu #icona {
-    font-size: 3.4rem;
+    font-size: 3rem;
     cursor: pointer;
     text-align: right;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     font-family: monospace;
     position: relative;
 }
@@ -111,7 +111,6 @@ main {
 }
 
 #bio {
-    /* width: 12.5rem; */
     padding: 1rem;
     margin-bottom: 2rem;
 }
