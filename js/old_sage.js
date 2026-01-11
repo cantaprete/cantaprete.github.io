@@ -103,13 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function throwOne() {
-    let side = Math.floor(Math.random() * 2)
-    switch (side) {
-      case 0:
-        return 2
-      case 1:
-        return 3
-    }
+    const array = new Uint8Array(1)
+    self.crypto.getRandomValues(array)
+    return array[0] < 128 ? 2 : 3
   }
 
   async function throwCoins() {
