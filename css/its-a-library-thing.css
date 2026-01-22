@@ -104,7 +104,7 @@ a {
 
 main {
     display: flex;
-    gap: .6rem;
+    gap: 1.4rem;
     align-items: end;
     flex-direction: row;
     flex-wrap: wrap;
