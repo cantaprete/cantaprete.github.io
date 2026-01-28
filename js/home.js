@@ -12,8 +12,10 @@
 // document.addEventListener('DOMContentLoaded', riordinaCasualmente)
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mainTag = document.querySelector('main')
-    const progetti = mainTag.querySelectorAll('div')
+    const mainTag = document.querySelector('header')
+    const progetti = mainTag.querySelectorAll('.progetto')
+    const bio = document.querySelector('#bio')
+    bio.scrollIntoView(true)
 
     progetti.forEach(progetto => {
         const img = progetto.querySelector('img')
@@ -72,34 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     resetButton.addEventListener('click', resetta)
-
-    let fireBurger = document.querySelector('#menu #icona')
-
-    function controllaClick(e) {
-        let menu = document.querySelector('#menu ul')
-        if (!menu.contains(e.target) && !fireBurger.contains(e.target)) {
-            azionaMenu()
-        }
-    }
-
-    function azionaMenu() {
-        document.querySelector('#menu ul').classList.toggle('nascosto')
-        document.querySelectorAll('.annebbiabile').forEach(elemento => {
-            elemento.classList.toggle('annebbiato')
-        })
-        document.querySelectorAll('a:not(.menu-link)').forEach(elemento => {
-            elemento.classList.toggle('non-cliccabile')
-        })
-
-        if (fireBurger.querySelector('#menu-open').classList.contains('hidden')) {
-            document.removeEventListener('click', controllaClick)
-        } else {
-            document.addEventListener('click', controllaClick)
-        }
-        
-        fireBurger.querySelector('#menu-open').classList.toggle('hidden')
-    }
-
-    fireBurger.addEventListener('click', azionaMenu)
 })
 

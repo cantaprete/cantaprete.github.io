@@ -30,74 +30,6 @@ body {
     z-index: -2;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-}
-
-#menu a {
-    color: var(--fg-color);
-    text-decoration: none;
-}
-
-#menu #icona {
-    font-size: 3rem;
-    cursor: pointer;
-    text-align: right;
-    margin: 1rem 1rem;
-    font-family: monospace;
-    position: relative;
-}
-
-#menu #icona #menu-open {
-    position: absolute;
-    right: 0;
-    transform: rotateX(0deg);
-    transition: var(--animation-speed) transform var(--animation-mode);
-}
-
-#menu #icona #menu-open.hidden {
-    transform: rotateX(90deg);
-    transition: var(--animation-speed) transform var(--animation-mode);
-}
-
-#menu ul {
-    margin: 0 1rem;
-    list-style-type: none;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-#menu li {
-    background-color: var(--menu-color);
-    padding: 1rem 1.6rem;
-    max-width: fit-content;
-    text-align: right;
-}
-
-.bottom-round {
-    border-bottom-left-radius: var(--menu-radius);
-}
-
-.top-round {
-    border-top-left-radius: var(--menu-radius);
-}
-
-#menu li:first-of-type {
-    border-top-right-radius: var(--menu-radius);
-    border-top-left-radius: var(--menu-radius);
-}
-
-#menu li:last-of-type {
-    border-bottom-right-radius: var(--menu-radius);
-    border-bottom-left-radius: var(--menu-radius);
-}
-
 a {
     color: var(--link-color);
 }
@@ -113,6 +45,7 @@ main {
 #bio {
     padding: 1rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 #bio #nome {
@@ -127,7 +60,6 @@ main {
 #bio p {
     margin-block-start: .6rem;
     margin-block-end: .6rem;
-
 }
 
 .progetto {
@@ -141,7 +73,6 @@ main {
 }
 
 .progetto[data-tipo=libro] img {
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
     transition: var(--animation-speed) filter var(--animation-mode);
 }
 
@@ -149,20 +80,6 @@ footer {
     margin-top: 2rem;
     font-size: .8rem;
     text-align: center;
-}
-
-footer svg {
-    width: 2rem;
-}
-
-svg path {
-    fill: var(--fg-color);
-}
-
-footer #gpg {
-    font-family: monospace;
-    font-size: smaller;
-    letter-spacing: 1px;
 }
 
 #selettore {
@@ -187,23 +104,6 @@ footer #gpg {
 
 label {
     display: none;
-}
-
-.nascosto {
-    display: none !important;
-}
-
-.annebbiabile {
-    transition: var(--animation-speed) filter var(--animation-mode);
-}
-
-.annebbiato {
-    filter: blur(5px) grayscale(100%);
-    transition: var(--animation-speed) filter var(--animation-mode);
-}
-
-.non-cliccabile {
-    pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {
