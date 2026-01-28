@@ -1,6 +1,0 @@
-{{ define "main" }}
-  {{ $section := .Site.GetPage "section" "pubblicazioni" }}
-  {{ range $section.Pages }}
-    {{ partial "pubblicazione" . }}
-  {{ end }}
-{{ end }}
