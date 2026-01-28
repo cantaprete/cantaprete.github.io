@@ -1,0 +1,22 @@
+{{ $scale := 100 }}
+{{ $formats := slice "webp" "jpeg" }}
+{{ $sizes := slice 1 2 3 }}
+{{ $cover := .Resources.GetMatch "cover.*" }}
+{{ $baseWidth := mul (div .Params.width 100) $scale }}
+{{ $baseHeight := div (mul $baseWidth $cover.Height) $cover.Width }}
+<div class="progetto" data-pagine="{{ .Params.pages }}" data-anno="{{ .Date | time.Format " 2006-01-02" }}" data-tipo="{{ .Type }}" data-ruolo="{{ .Params.role }}" data-genere="{{ .Params.genre }}">
+    <a href="{{ .Params.pubUrl}}" target="_blank">
+        <picture>
+            {{ range $formats }}
+            {{ $format := . }}
+            <source srcset="
+            {{ range $sizes }}
+            {{ $image := $cover.Resize (printf "%s %s q90 lanczos" (printf "%dx" (mul $baseWidth .)) $format) }}
+            {{ $image.RelPermalink}} {{.}}x,
+            {{ end }}"
+             type="image/{{.}}">
+            {{end}}
+            <img src="{{ $cover.RelPermalink }}" alt="{{ .Title }}" width="{{ $baseWidth }}" height="{{ $baseHeight }}">
+        </picture>
+    </a>
+</div>
