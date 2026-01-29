@@ -12,7 +12,7 @@
 // document.addEventListener('DOMContentLoaded', riordinaCasualmente)
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mainTag = document.querySelector('header')
+    const mainTag = document.querySelector('main')
     const progetti = mainTag.querySelectorAll('.progetto')
     const bio = document.querySelector('#bio')
     bio.scrollIntoView(true)
