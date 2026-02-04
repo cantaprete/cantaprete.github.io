@@ -40,6 +40,7 @@ main {
     align-items: end;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #bio {
