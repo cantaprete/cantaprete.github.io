@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mainTag = document.querySelector('main')
-    const progetti = mainTag.querySelectorAll('.progetto')
+    const progetti = document.querySelectorAll('.progetto')
     const bio = document.querySelector('#bio')
     bio.scrollIntoView({
             behavior: 'auto',
