@@ -75,7 +75,8 @@
   --link-color: #3171a5;
   --animation-speed: 0.15s;
   --animation-mode: linear;
-  --menu-color: #ffd500;
+  --section-1: #76abd9;
+  --section-2: #b95555;
   --menu-radius: 1rem;
 }
 
@@ -186,7 +187,7 @@ main {
   margin-left: 2rem;
   flex-basis: 60%;
   line-height: 1.5;
-  background-color: #76abd9;
+  background-color: var(--section-1);
   color: #ffffff;
   mix-blend-mode: multiply;
 }
@@ -269,7 +270,7 @@ footer ul {
   }
 
   #nello-specifico {
-    background-color: #b95555;
+    background-color: var(--section-2);
     color: #ffffff;
     margin-left: 4rem;
     padding: 3rem 2rem;
@@ -294,7 +295,12 @@ footer ul {
     --fg-color: var(--light-color);
     --bg-color: var(--dark-color);
     --link-color: #f09262;
-    --menu-color: #b98502;
+    --section-1: #1d4c9c;
+    --section-2: #6e341d;
+  }
+
+  #cosa, #nello-specifico {
+    mix-blend-mode: lighten;
   }
 
   #noise {
