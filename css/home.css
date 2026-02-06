@@ -249,7 +249,8 @@ footer ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 1.4rem;
+  column-gap: 1.4rem;
+  row-gap: .6rem;
   padding: 0;
   margin: 0;
   list-style-type: none;
