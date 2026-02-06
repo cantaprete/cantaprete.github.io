@@ -1,14 +1,12 @@
+@font-face {
+  font-family: "Founders Grotesk Mono";
+  src: url("/fonts/FoundersGroteskMono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+
 :root {
-    --light-color: #f0eee7;
-    --dark-color: #131832;
-    --base-font-stack: system-ui, sans-serif;
-    --fg-color: var(--dark-color);
-    --bg-color: var(--light-color);
-    --link-color: #3171a5;
-    --animation-speed: .15s;
-    --animation-mode: linear;
-    --menu-color: #ffd500;
-    --menu-radius: 1rem;
+  --mono-font-stack: "Founders Grotesk Mono", monospace;
 }
 
 body {
@@ -77,12 +75,6 @@ main {
     transition: var(--animation-speed) filter var(--animation-mode);
 }
 
-footer {
-    margin-top: 2rem;
-    font-size: .8rem;
-    text-align: center;
-}
-
 #selettore {
     font-size: .9rem;
     margin: 2rem 0;
@@ -106,6 +98,30 @@ footer {
 label {
     display: none;
 }
+footer {
+  font-family: var(--mono-font-stack);
+  margin: 3rem 2rem;
+  text-transform: uppercase;
+  font-size: .6rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--fg-color);
+  text-decoration: none;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.4rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: center;
+}
+
 
 @media (prefers-color-scheme: dark) {
     :root {
