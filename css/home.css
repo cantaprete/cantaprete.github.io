@@ -186,8 +186,8 @@ main {
   margin-left: 2rem;
   flex-basis: 60%;
   line-height: 1.5;
-  background-color: rgb(118, 171, 217);
-  color: white;
+  background-color: #76abd9;
+  color: #ffffff;
   mix-blend-mode: multiply;
 }
 
@@ -265,7 +265,16 @@ footer ul {
   #cosa {
     margin-left: 0;
     margin-right: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: -2rem;
+  }
+
+  #nello-specifico {
+    background-color: #b95555;
+    color: #ffffff;
+    margin-left: 4rem;
+    padding: 3rem 2rem;
+    mix-blend-mode: multiply;
+    font-size: 1.4rem;
   }
 }
 
