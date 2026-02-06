@@ -1,10 +1,42 @@
 @font-face {
   font-family: "Founders Grotesk";
+  src: url("/fonts/FoundersGrotesk-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk";
   src: url("/fonts/FoundersGrotesk-Medium.woff2") format("woff2");
   font-display: swap;
   font-weight: 500;
 }
 
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("/fonts/FoundersGrotesk-Semibold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Text";
+  src: url("/fonts/FoundersGroteskText-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Text";
+  src: url("/fonts/FoundersGroteskText-Light.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Text";
+  src: url("/fonts/FoundersGroteskText-Medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
 
 @font-face {
   font-family: "Founders Grotesk Mono";
@@ -12,6 +44,25 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Founders Grotesk Text";
+  src: url("/fonts/FoundersGroteskText-Light.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Garamond Narrow";
+  src: url("/fonts/ITCGaramondStd-LtNarrow.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garamond Narrow";
+  src: url("/fonts/ITCGaramondStd-LtNarrowIta.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+}
 
 :root {
   --light-color: #f0eee7;
@@ -111,18 +162,76 @@ a {
 }
 
 .secondo-piano {
-    filter: grayscale() opacity(20%) blur(4px);
-    transition: var(--animation-speed) filter var(--animation-mode);
+  filter: grayscale() opacity(20%) blur(4px);
+  transition: var(--animation-speed) filter var(--animation-mode);
 }
 
 .secondo-piano img {
-    box-shadow: none;
-    transition: var(--animation-speed) filter var(--animation-mode);
+  box-shadow: none;
+  transition: var(--animation-speed) filter var(--animation-mode);
 }
 
 label {
-    display: none;
+  display: none;
 }
+
+main {
+  display: flex;
+}
+
+#cosa {
+  font-family: var(--text-font-stack);
+  font-size: 2rem;
+  padding: 2rem;
+  margin-left: 2rem;
+  flex-basis: 60%;
+  line-height: 1.5;
+  background-color: rgb(118, 171, 217);
+  color: white;
+  mix-blend-mode: multiply;
+}
+
+#cosa a {
+  color: inherit;
+  font-style: italic;
+}
+
+#cosa #link {
+  margin-top: 4rem;
+}
+
+#cosa #link ul {
+  font-family: var(--display-font-stack);
+  font-size: 1.2rem;
+  /* list-style: "⁖"; */
+  list-style-type: none;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#cosa #link a {
+  font-style: normal;
+  text-decoration: none;
+}
+
+#nello-specifico {
+  font-family: "Founders Grotesk Text", sans-serif;
+  padding: 0 2rem;
+  flex-basis: 40%;
+  font-weight: 300;
+}
+
+#nello-specifico em {
+  font-weight: 400;
+  font-style: normal;
+}
+
+#nello-specifico p:first-of-type {
+  margin-top: 0;
+}
+
 footer {
   font-family: var(--mono-font-stack);
   margin: 3rem 2rem;
@@ -147,16 +256,38 @@ footer ul {
   justify-content: center;
 }
 
+@media screen and (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  #cosa {
+    margin-left: 0;
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    flex-direction: column;
+  }
+
+  #cosa {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --fg-color: var(--light-color);
-        --bg-color: var(--dark-color);
-        --link-color: #f09262;
-        --menu-color: #b98502;
-    }
+  :root {
+    --fg-color: var(--light-color);
+    --bg-color: var(--dark-color);
+    --link-color: #f09262;
+    --menu-color: #b98502;
+  }
 
-    #noise {
-        mix-blend-mode: lighten;
-    }
+  #noise {
+    mix-blend-mode: lighten;
+  }
 }
