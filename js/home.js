@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainTag = document.querySelector('main')
     const progetti = mainTag.querySelectorAll('.progetto')
     const bio = document.querySelector('#bio')
-    bio.scrollIntoView(true)
+    bio.scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        })
 
     progetti.forEach(progetto => {
         const img = progetto.querySelector('img')
