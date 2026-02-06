@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Founders Grotesk";
+  src: url("/fonts/FoundersGrotesk-Medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
+
+
+@font-face {
   font-family: "Founders Grotesk Mono";
   src: url("/fonts/FoundersGroteskMono-Regular.woff2") format("woff2");
   font-display: swap;
@@ -6,83 +14,100 @@
 
 
 :root {
+  --light-color: #f0eee7;
+  --dark-color: #131832;
+  --base-font-stack: system-ui, sans-serif;
+  --display-font-stack: "Founders Grotesk", Helvetica, Arial, sans-serif;
   --mono-font-stack: "Founders Grotesk Mono", monospace;
+  --text-font-stack: "Garamond Narrow", serif;
+  --bg-color: var(--light-color);
+  --link-color: #3171a5;
+  --animation-speed: 0.15s;
+  --animation-mode: linear;
+  --menu-color: #ffd500;
+  --menu-radius: 1rem;
 }
 
 body {
-    font-family: var(--base-font-stack);
-    color: var(--fg-color);
-    background-color: var(--bg-color);
-    font-size: 18px;
+  font-family: var(--base-font-stack);
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  font-size: 18px;
+  margin: 0;
 }
 
 #noise {
-    background-image: url(/img/home/noise.svg);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    mix-blend-mode: darken;
-    opacity: .4;
-    z-index: -2;
+  background-image: url(/img/home/noise.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: darken;
+  opacity: 0.4;
+  z-index: -2;
 }
 
 a {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 
-main {
-    display: flex;
-    gap: 1.4rem;
-    align-items: end;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+#libreria {
+  display: flex;
+  gap: 1.4rem;
+  align-items: end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
 }
 
 #bio {
-    padding: 1rem;
-    margin-bottom: 2rem;
-    text-align: center;
+  padding: 4rem;
+  margin: 2rem;
+  text-align: center;
+  font-family: var(--display-font-stack);
 }
 
 #bio #nome {
-    font-weight: 540;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .4rem;
-    font-stretch: 140%;
-    font-width: 140%;
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: .2rem;
+  font-stretch: 120%;
+  font-width: 120%;
 }
 
 #bio p {
-    margin-block-start: .6rem;
-    margin-block-end: .6rem;
+  margin-block-start: 0.6rem;
+  margin-block-end: 0.6rem;
 }
 
 .progetto {
-    filter: grayscale(0%) opacity(100%) blur(0);
-    transition: var(--animation-speed) filter var(--animation-mode);
+  filter: grayscale(0%) opacity(100%) blur(0);
+  transition: var(--animation-speed) filter var(--animation-mode);
 }
 
 .progetto img {
-    border-radius: 2px;
-    box-shadow: #32325d40 0px 2px 5px, #0000004d 0px 1px 3px;
+  border-radius: 2px;
+  box-shadow:
+    #32325d40 0px 2px 5px,
+    #0000004d 0px 1px 3px;
 }
 
-.progetto[data-tipo=libro] img {
-    transition: var(--animation-speed) filter var(--animation-mode);
+.progetto[data-tipo="libro"] img {
+  transition: var(--animation-speed) filter var(--animation-mode);
 }
 
 #selettore {
-    font-size: .9rem;
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  font-size: 0.9rem;
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .secondo-piano {
