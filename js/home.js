@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const progetti = document.querySelectorAll('.progetto')
     const bio = document.querySelector('#bio')
     bio.scrollIntoView({
-            behavior: 'auto',
-            block: 'center',
-            inline: 'center'
-        })
-
+        behavior: 'auto',
+        block: 'center',
+        inline: 'center'
+    })
+    
+    const progetti = document.querySelectorAll('.progetto')
     progetti.forEach(progetto => {
         const img = progetto.querySelector('img')
         const width = progetto.dataset.pagine / 22
