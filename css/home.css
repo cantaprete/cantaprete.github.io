@@ -45,13 +45,14 @@
 
 :root {
   --light-color: #f0eee7;
-  --dark-color: #131832;
+  --dark-color: #603721; /* #131832; */
   --base-font-stack: system-ui, sans-serif;
   --display-font-stack: "Founders Grotesk", Helvetica, Arial, sans-serif;
   --mono-font-stack: "Founders Grotesk Mono", monospace;
   --text-1-font-stack: "Garamond Narrow", serif;
   --text-2-font-stack: "Founders Grotesk Text", sans-serif;
   --bg-color: var(--light-color);
+  --fg-color: var(--dark-color);
   --link-color: #3171a5;
   --animation-speed: 0.15s;
   --animation-mode: linear;
