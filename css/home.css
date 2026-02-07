@@ -12,13 +12,6 @@
 }
 
 @font-face {
-  font-family: "Founders Grotesk";
-  src: url("/fonts/FoundersGrotesk-Semibold.woff2") format("woff2");
-  font-display: swap;
-  font-weight: 600;
-}
-
-@font-face {
   font-family: "Founders Grotesk Text";
   src: url("/fonts/FoundersGroteskText-Regular.woff2") format("woff2");
   font-display: swap;
@@ -32,23 +25,9 @@
 }
 
 @font-face {
-  font-family: "Founders Grotesk Text";
-  src: url("/fonts/FoundersGroteskText-Medium.woff2") format("woff2");
-  font-display: swap;
-  font-weight: 500;
-}
-
-@font-face {
   font-family: "Founders Grotesk Mono";
   src: url("/fonts/FoundersGroteskMono-Regular.woff2") format("woff2");
   font-display: swap;
-}
-
-@font-face {
-  font-family: "Founders Grotesk Text";
-  src: url("/fonts/FoundersGroteskText-Light.woff2") format("woff2");
-  font-display: swap;
-  font-weight: 300;
 }
 
 @font-face {
@@ -70,7 +49,8 @@
   --base-font-stack: system-ui, sans-serif;
   --display-font-stack: "Founders Grotesk", Helvetica, Arial, sans-serif;
   --mono-font-stack: "Founders Grotesk Mono", monospace;
-  --text-font-stack: "Garamond Narrow", serif;
+  --text-1-font-stack: "Garamond Narrow", serif;
+  --text-2-font-stack: "Founders Grotesk Text", sans-serif;
   --bg-color: var(--light-color);
   --link-color: #3171a5;
   --animation-speed: 0.15s;
@@ -179,7 +159,7 @@ main {
 }
 
 #cosa {
-  font-family: var(--text-font-stack);
+  font-family: var(--text-1-font-stack);
   font-size: 2rem;
   padding: 2rem;
   margin-left: 2rem;
@@ -216,7 +196,7 @@ main {
 }
 
 #nello-specifico {
-  font-family: "Founders Grotesk Text", sans-serif;
+  font-family: var(--text-2-font-stack);
   padding: 0 2rem;
   flex-basis: 40%;
   font-weight: 300;
