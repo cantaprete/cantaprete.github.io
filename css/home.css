@@ -106,8 +106,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: .2rem;
-  font-stretch: 120%;
-  font-width: 120%;
 }
 
 #bio p {
