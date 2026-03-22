@@ -45,7 +45,7 @@
 
 :root {
   --light-color: #f0eee7;
-  --dark-color: #603721; /* #131832; */
+  --dark-color: #453831;;
   --base-font-stack: system-ui, sans-serif;
   --display-font-stack: "Founders Grotesk", Helvetica, Arial, sans-serif;
   --mono-font-stack: "Founders Grotesk Mono", monospace;
@@ -199,6 +199,14 @@ main {
   padding: 0 2rem;
   flex-basis: 40%;
   font-weight: 300;
+  background-color: var(--section-2);
+  color: #ffffff;
+  padding: 3rem 2rem;
+  font-size: 1.6rem;
+  margin-left: -1rem;
+  margin-right: 1rem;
+  margin-top: -0.8rem;
+  margin-bottom: .8rem;
 }
 
 #nello-specifico em {
@@ -247,12 +255,11 @@ footer ul {
   }
 
   #nello-specifico {
-    background-color: var(--section-2);
-    color: #ffffff;
-    margin-left: 4rem;
-    padding: 3rem 2rem;
     mix-blend-mode: multiply;
-    font-size: 1.4rem;
+    margin-left: 4rem;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -272,11 +279,12 @@ footer ul {
     --fg-color: var(--light-color);
     --bg-color: var(--dark-color);
     --link-color: #f09262;
-    --section-1: #1d4c9c;
+    --section-1: #536b95;
     --section-2: #6e341d;
   }
 
-  #cosa, #nello-specifico {
+  #cosa,
+  #nello-specifico {
     mix-blend-mode: lighten;
   }
 
