@@ -1,68 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const bio = document.querySelector('#bio')
-    bio.scrollIntoView({
-        behavior: 'auto',
-        block: 'center',
-        inline: 'center'
-    })
-    
-    const progetti = document.querySelectorAll('.progetto')
-    progetti.forEach(progetto => {
-        const img = progetto.querySelector('img')
-        const width = progetto.dataset.pagine / 22
-        const baseStyle = "#32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px, "
-        img.style.boxShadow = baseStyle + '0px ' + width + 'px 5px #0000004d'
-    });
+function moveTitle() {
+    let oldTitle = document.querySelector('h1')
+    let h1Text = oldTitle.textContent
+    oldTitle.remove()
 
-    const resetButton = document.querySelector('#reset')
-    const selettori = document.querySelectorAll('select')
-    var filtro = {
-        'tipo': 'all',
-        'target': 'all',
-        'genere': 'all',
-        'ruolo': 'all'
+    let immissionPoint = document.querySelector('#newsletter')
+    let newTitle = document.createElement('h1')
+    newTitle.textContent = h1Text
+    immissionPoint.after(newTitle)
+
+    let oldEmail = document.querySelector('#email')
+    let emailAddress = oldEmail.querySelector('a').getAttribute('href')
+    console.log(emailAddress)
+    let emailLabel = oldEmail.textContent
+    oldEmail.remove()
+    let newEmailWrapper = document.createElement('p')
+    newEmailWrapper.id = 'email'
+    let newEmailLink =document.createElement('a')
+    newEmailLink.setAttribute('href', emailAddress)
+    newEmailLink.textContent = emailLabel
+    newEmailWrapper.appendChild(newEmailLink)
+    newTitle.after(newEmailWrapper)
+}
+
+function spaceContent() {
+    let navList = document.querySelector('ul')
+    let windowHeight = window.screen.height
+    let contentHeight = navList.getBoundingClientRect().height
+    let marginTop = Math.floor((windowHeight - contentHeight) / 2)
+    if (marginTop > 0) {
+        navList.style.marginTop = marginTop + "px"
     }
+    console.log(windowHeight, contentHeight, marginTop)
+}
 
-    function filtra() {
-        let ultimiFiltrati = document.querySelectorAll('.progetto.secondo-piano')
-        ultimiFiltrati.forEach(progetto => {
-            progetto.classList.remove('secondo-piano')
-        })
-
-        resetButton.disabled = true
-
-        for (const key in filtro) {
-            if (filtro[key] != 'all') {
-                resetButton.disabled = false
-                const daFiltrare = document.querySelectorAll(`.progetto:not([data-${key}=${filtro[key]}])`)
-                daFiltrare.forEach(progetto => {
-                    progetto.classList.add('secondo-piano')
-                })
-            }
-        }
-
-    }
-
-    function resetta() {
-        selettori.forEach(selettore => {
-            selettore.value = 'all'
-        })
-        for (const key in filtro) {
-            filtro[key] = 'all'
-        }
-        filtra()
-    }
-
-    function impostaFiltro() {
-        filtro[this.id] = this.value
-
-        filtra()
-    }
-
-    selettori.forEach(selettore => {
-        selettore.addEventListener('change', impostaFiltro)
-    })
-
-    resetButton.addEventListener('click', resetta)
-})
-
+document.addEventListener('DOMContentLoaded', moveTitle)
+document.addEventListener('DOMContentLoaded', spaceContent)
+document.addEventListener('resize', spaceContent)
