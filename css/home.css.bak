@@ -1,0 +1,294 @@
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("/fonts/FoundersGrotesk-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("/fonts/FoundersGrotesk-Medium.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Text";
+  src: url("/fonts/FoundersGroteskText-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Text";
+  src: url("/fonts/FoundersGroteskText-Light.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Founders Grotesk Mono";
+  src: url("/fonts/FoundersGroteskMono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garamond Narrow";
+  src: url("/fonts/ITCGaramondStd-LtNarrow.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garamond Narrow";
+  src: url("/fonts/ITCGaramondStd-LtNarrowIta.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+}
+
+:root {
+  --light-color: #fff; /* #f0eee7; */
+  --dark-color: #000; /* #453831; */
+  --base-font-stack: system-ui, sans-serif;
+  --display-font-stack: "Founders Grotesk", Helvetica, Arial, sans-serif;
+  --mono-font-stack: "Founders Grotesk Mono", monospace;
+  --text-1-font-stack: "Garamond Narrow", serif;
+  --text-2-font-stack: "Founders Grotesk Text", sans-serif;
+  --bg-color: var(--light-color);
+  --fg-color: var(--dark-color);
+  --link-color: #3171a5;
+  --animation-speed: 0.15s;
+  --animation-mode: linear;
+  --section-1: #76abd9;
+  --section-2: #b95555;
+  --menu-radius: 1rem;
+}
+
+body {
+  font-family: var(--base-font-stack);
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  font-size: 18px;
+  margin: 0;
+}
+
+/* #noise {
+  background-image: url(/img/home/noise.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: darken;
+  opacity: 0.8;
+  z-index: -2;
+} */
+
+a {
+  color: var(--link-color);
+}
+
+#libreria {
+  display: flex;
+  gap: 1.4rem;
+  align-items: end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#bio {
+  padding: 4rem;
+  margin: 2rem;
+  text-align: center;
+  font-family: var(--display-font-stack);
+}
+
+#bio #nome {
+  font-weight: 500;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: .2rem;
+}
+
+#bio p {
+  margin-block-start: 0.6rem;
+  margin-block-end: 0.6rem;
+}
+
+.progetto {
+  filter: grayscale(0%) opacity(100%) blur(0);
+  transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+.progetto img {
+  border-radius: 2px;
+  box-shadow:
+    #32325d40 0px 2px 5px,
+    #0000004d 0px 1px 3px;
+}
+
+.progetto[data-tipo="libro"] img {
+  transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+#selettore {
+  font-size: 0.9rem;
+  margin: 2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.secondo-piano {
+  filter: grayscale() opacity(20%) blur(4px);
+  transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+.secondo-piano img {
+  box-shadow: none;
+  transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+label {
+  display: none;
+}
+
+main {
+  display: flex;
+}
+
+#cosa {
+  font-family: var(--text-1-font-stack);
+  font-size: 2rem;
+  padding: 2rem;
+  margin-left: 2rem;
+  flex-basis: 60%;
+  line-height: 1.5;
+  background-color: var(--section-1);
+  color: #ffffff;
+  mix-blend-mode: multiply;
+}
+
+#cosa a {
+  color: inherit;
+  font-style: italic;
+}
+
+#cosa #link {
+  margin-top: 4rem;
+}
+
+#cosa #link ul {
+  font-family: var(--display-font-stack);
+  font-size: 1.2rem;
+  /* list-style: "⁖"; */
+  list-style-type: none;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#cosa #link a {
+  font-style: normal;
+  text-decoration: none;
+}
+
+#nello-specifico {
+  font-family: var(--text-2-font-stack);
+  padding: 0 2rem;
+  flex-basis: 40%;
+  font-weight: 300;
+  background-color: var(--section-2);
+  color: #ffffff;
+  padding: 3rem 2rem;
+  font-size: 1.6rem;
+  margin-left: -1rem;
+  margin-right: 1rem;
+  margin-top: -0.8rem;
+  margin-bottom: .8rem;
+}
+
+#nello-specifico em {
+  font-weight: 400;
+  font-style: normal;
+}
+
+#nello-specifico p:first-of-type {
+  margin-top: 0;
+}
+
+footer {
+  font-family: var(--mono-font-stack);
+  margin: 3rem 2rem;
+  text-transform: uppercase;
+  font-size: .6rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--fg-color);
+  text-decoration: none;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 1.4rem;
+  row-gap: .6rem;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  #cosa {
+    margin-left: 0;
+    margin-right: 4rem;
+    margin-bottom: -2rem;
+  }
+
+  #nello-specifico {
+    mix-blend-mode: multiply;
+    margin-left: 4rem;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    flex-direction: column;
+  }
+
+  #cosa {
+    margin-left: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg-color: var(--light-color);
+    --bg-color: var(--dark-color);
+    --link-color: #f09262;
+    --section-1: #536b95;
+    --section-2: #6e341d;
+  }
+
+  #cosa,
+  #nello-specifico {
+    mix-blend-mode: lighten;
+  }
+
+  #noise {
+    mix-blend-mode: lighten;
+  }
+}
