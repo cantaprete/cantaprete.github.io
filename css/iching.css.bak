@@ -20,6 +20,11 @@ body {
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
 #container {
   display: flex;
   gap: 20px;
@@ -82,11 +87,12 @@ hr {
   background-image: url("/img/iching/yang_.png");
 }
 
-.btn, .btn-default {
+.btn,
+.btn-default {
   min-height: 20px;
   min-width: 59px;
   padding: 0 20px;
-  text-align:center;
+  text-align: center;
   background: var(--primary);
   border-style: solid;
   border-width: 5.5px;
@@ -110,7 +116,7 @@ hr {
 
 .btn:active {
   background: var(--secondary);
-  border-radius:6px;
+  border-radius: 6px;
   color: var(--primary);
 }
 
@@ -126,7 +132,6 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
   align-items: flex-start;
 }
 
@@ -144,10 +149,11 @@ hr {
 
 #arrow {
   align-self: center;
+  flex: 1;
 }
 
-.response_hex {
-  width: 40%;
+#response a {
+  flex: 3;
 }
 
 @media only screen and (max-width: 400px) {
