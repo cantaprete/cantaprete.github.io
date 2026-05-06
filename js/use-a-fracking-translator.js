@@ -1,4 +1,5 @@
 const delay = ms => new Promise(res => setTimeout(res, ms))
+var speed = 1000
 
 function mescola() {
     let parole = document.querySelectorAll('span')
@@ -17,5 +18,5 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < (parole.length / 2); i++) {
         mescola()
     }
-    window.setInterval(mescola, 1000)
+    window.setInterval(mescola, speed)
 })
