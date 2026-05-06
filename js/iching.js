@@ -197,6 +197,7 @@ async function throwCoins() {
         if (linesVal[i] === 0) {
             linesVal[i] = sum
             if (i === 5) {
+                document.querySelector('#throw').setAttribute('disabled', 'disabled')
                 explain()
             }
             break;
@@ -207,6 +208,7 @@ async function throwCoins() {
 }
 
 function reset() {
+    document.querySelector('#throw').removeAttribute('disabled')
     linesVal.fill(0)
     redraw()
     const response = document.querySelector('#response')
