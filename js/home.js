@@ -24,8 +24,11 @@ function moveTitle() {
 
 function spaceContent() {
     let navList = document.querySelector('ul')
+    let header = document.querySelector('h1')
+    let email = document.querySelector('#email')
+
     let windowHeight = window.screen.height
-    let contentHeight = navList.getBoundingClientRect().height
+    let contentHeight = navList.getBoundingClientRect().height + header.getBoundingClientRect().height + email.getBoundingClientRect().height
     let marginTop = Math.floor((windowHeight - contentHeight) / 2)
     if (marginTop > 0) {
         navList.style.marginTop = marginTop + "px"
