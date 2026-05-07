@@ -3,7 +3,7 @@ function moveTitle() {
     let h1Text = oldTitle.textContent
     oldTitle.remove()
 
-    let immissionPoint = document.querySelector('#newsletter')
+    let immissionPoint = document.querySelector('#libri')
     let newTitle = document.createElement('h1')
     newTitle.textContent = h1Text
     immissionPoint.after(newTitle)
