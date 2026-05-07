@@ -10,7 +10,6 @@ function moveTitle() {
 
     let oldEmail = document.querySelector('#email')
     let emailAddress = oldEmail.querySelector('a').getAttribute('href')
-    console.log(emailAddress)
     let emailLabel = oldEmail.textContent
     oldEmail.remove()
     let newEmailWrapper = document.createElement('p')
