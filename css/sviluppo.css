@@ -1,31 +1,16 @@
-@font-face {
-    font-family: Futura;
-    src: url("/fonts/fut-reg.woff2") format("woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Futura;
-    src: url("/fonts/fut-ita.woff2") format("woff2");
-    font-display: swap;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Futura;
-    src: url("/fonts/fut-bld.woff2") format("woff2");
-    font-display: swap;
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Futura;
-    src: url("/fonts/fut-xtr.woff2") format("woff2");
-    font-display: swap;
-    font-weight: 900;
-}
-
 :root {
+    --background: white;
+    --foreground: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --foreground: white;
+  }
+}
+
+/* :root {
     --light-color: #f8f8f7;
     --dark-color: #202020;
     --base-font-stack: Futura, 'Gill Sans', 'Gill Sans MT', sans-serif;
@@ -42,53 +27,18 @@
         --bg-color: var(--dark-color);
         --link: #e68c42;
     }
-}
+} */
 
 body {
-    font-family: var(--base-font-stack);
-    background-color: var(--bg-color);
-    color: var(--fg-color);
-}
-
-a {
-    color: var(--link);
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: sans-serif;
+    padding: 1rem;
 }
 
 article {
     max-width: var(--max-width);
     margin-left: var(--margin);
-}
-
-header h1 {
-    font-weight: 400;
-    font-size: 2rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: uppercase;
-    margin-bottom: 0;
-    margin-top: 2.5rem;
-    font-weight: 900;
-}
-
-h1+p,
-h2+p,
-h3+p,
-h4+p,
-h5+p,
-h6+p {
-    margin-top: 0;
-}
-
-h4,
-h5,
-h6 {
-    text-transform: none;
 }
 
 math {
