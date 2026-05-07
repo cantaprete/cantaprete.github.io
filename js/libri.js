@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const progetti = document.querySelectorAll('.progetto')
+    const k = 18
     progetti.forEach(progetto => {
         const img = progetto.querySelector('img')
-        const width = progetto.dataset.pagine / 22
+        const width = progetto.dataset.pagine / k
         const baseStyle = "#32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px, "
         img.style.boxShadow = baseStyle + '0px ' + width + 'px 5px #0000004d'
     });
