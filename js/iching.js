@@ -184,6 +184,7 @@ function throwOne() {
 }
 
 async function throwCoins() {
+    document.querySelector('#reset').removeAttribute('disabled')
     let sum = 0
     if (checkWebWorkers()) {
         sum = await throwAllThree();
@@ -208,6 +209,7 @@ async function throwCoins() {
 }
 
 function reset() {
+    document.querySelector('#reset').setAttribute('disabled', 'disabled')
     document.querySelector('#throw').removeAttribute('disabled')
     linesVal.fill(0)
     redraw()
