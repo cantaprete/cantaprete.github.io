@@ -1,3 +1,26 @@
+:root {
+    --background: white;
+    --foreground: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #666;
+    --foreground: white;
+  }
+}
+
+* {
+    font-size: 16px;
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: sans-serif;
+    padding: 1rem;
+}
+
 #libreria {
     display: flex;
     gap: 1.4rem;
