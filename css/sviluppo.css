@@ -8,6 +8,10 @@
     --background: black;
     --foreground: white;
   }
+
+  path {
+    stroke: var(--foreground);
+  }
 }
 
 /* :root {
