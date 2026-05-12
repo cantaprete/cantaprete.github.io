@@ -223,6 +223,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     throwBtn.addEventListener('click', throwCoins)
     resetBtn.addEventListener('click', reset)
+
+    let funcSpia = document.querySelector('#func')
+    if (checkWebWorkers()) {
+        funcSpia.textContent = '⊙'
+        funcSpia.setAttribute('title', 'WebWorker disponibili')
+    } else {
+        funcSpia.textContent = '⊚'
+        funcSpia.setAttribute('title', 'WebWorker non disponibili')
+    }
 })
 
 document.addEventListener('DOMContentLoaded', reset)
