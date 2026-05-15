@@ -1,16 +1,20 @@
 function moveTitle() {
-    let oldTitle = document.querySelector('h1')
-    let h1Text = oldTitle.textContent
-    oldTitle.remove()
-
-    let immissionPoint = document.querySelector('#libri')
-    let newTitle = document.createElement('h1')
-    newTitle.textContent = h1Text
-    immissionPoint.after(newTitle)
-
+    let oldHeader = document.querySelector('header')
+    let h1Text = document.querySelector('h1').textContent
     let oldEmail = document.querySelector('#email')
     let emailAddress = oldEmail.querySelector('a').getAttribute('href')
     let emailLabel = oldEmail.textContent
+
+    oldHeader.remove()
+
+    let immissionPoint = document.querySelector('#libri')
+    
+    let newHeader = document.createElement('header')
+    immissionPoint.after(newHeader)
+
+    let newTitle = document.createElement('h1')
+    newTitle.textContent = h1Text
+    newHeader.appendChild(newTitle)
     oldEmail.remove()
     let newEmailWrapper = document.createElement('p')
     newEmailWrapper.id = 'email'
@@ -22,7 +26,7 @@ function moveTitle() {
 }
 
 function spaceContent() {
-    let navList = document.querySelector('ul')
+    let navList = document.querySelector('nav')
     let header = document.querySelector('h1')
     let email = document.querySelector('#email')
 
@@ -32,7 +36,6 @@ function spaceContent() {
     if (marginTop > 0) {
         navList.style.marginTop = marginTop + "px"
     }
-    console.log(windowHeight, contentHeight, marginTop)
 }
 
 document.addEventListener('DOMContentLoaded', moveTitle)
