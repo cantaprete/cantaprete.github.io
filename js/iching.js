@@ -231,8 +231,8 @@ function toggleHistory() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#reset').addEventListener('click', throwCoins)
-    document.querySelector('#throw').addEventListener('click', reset)
+    document.querySelector('#reset').addEventListener('click', reset)
+    document.querySelector('#throw').addEventListener('click', throwCoins)
     document.querySelector('h2').addEventListener('click', toggleHistory)
 
     let funcSpia = document.querySelector('#func')
