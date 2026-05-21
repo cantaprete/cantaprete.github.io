@@ -141,6 +141,7 @@ function createLegend(hex) {
 
 function explain() {
     let legend = document.querySelector('#response')
+    let movingLines = []
 
     let firstHex = 0b000000
     let secondHex = 0b000000
@@ -148,6 +149,7 @@ function explain() {
     for (let i = 0; i < 6; i++) {
         switch (linesVal[i]) {
             case 6:
+                movingLines.push(i + 1)
                 firstHex |= (0b0 << i)
                 secondHex |= (0b1 << i)
                 break;
@@ -161,6 +163,7 @@ function explain() {
                 break;
             case 9:
                 firstHex |= (0b1 << i)
+                movingLines.push(i + 1)
                 secondHex |= (0b0 << i)
                 break;
         }
@@ -168,6 +171,16 @@ function explain() {
 
     let start = iching.find(h => h.pattern === firstHex)
     let end = iching.find(h => h.pattern === secondHex)
+
+    let label = start.number
+
+    if (movingLines.length > 0) {
+        movingLines.forEach(line => {
+            label += '.' + line
+        });
+    }
+
+    document.querySelector('label').textContent = label
 
     const response = document.querySelector('#response')
     response.append(createLegend(start))
@@ -211,6 +224,7 @@ async function throwCoins() {
 function reset() {
     document.querySelector('#reset').setAttribute('disabled', 'disabled')
     document.querySelector('#throw').removeAttribute('disabled')
+    document.querySelector('label').innerHTML = '&nbsp;'
     linesVal.fill(0)
     redraw()
     const response = document.querySelector('#response')

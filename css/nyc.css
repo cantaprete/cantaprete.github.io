@@ -6,6 +6,12 @@
     --max-width: 40rem;
     --lang-en: aliceblue;
     --lang-it: antiquewhite;
+    --primary-bg: #3478f6;
+    --primary-fg: white;
+    --destructive-bg: #e4e4e4;
+    --destructive-fg: red;
+    --disable-bg: #c0c0c0;
+    --disable-fg: #919191;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,7 +48,25 @@ article {
     margin-right: var(--margin);
 }
 
+input[type=button], button {
+    border-radius: 99em;
+    border: none;
+}
 
+input[type=button]:active:enabled, button:active:enabled {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+.primary:enabled {
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+}
+
+.destructive:enabled {
+    background-color: var(--destructive-bg);
+    color: var(--destructive-fg);
+}
 
 
 
@@ -274,8 +298,8 @@ body#dettami {
 /* iching.html */
 
 #iching input {
-    font-size: 1.2rem;
-    padding: 1rem 1.4rem;
+    font-size: 1rem;
+    padding: .6rem 1.4rem;
     touch-action: manipulation;
 }
 
@@ -302,6 +326,11 @@ body#dettami {
 #iching #container #hex {
     display: flex;
     flex-direction: column-reverse;
+}
+
+#iching #container #hex label {
+    text-align: center;
+    margin-top: .4rem;
 }
 
 #iching .line {
