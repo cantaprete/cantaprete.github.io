@@ -247,7 +247,7 @@ function toggleHistory() {
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#reset').addEventListener('click', reset)
     document.querySelector('#throw').addEventListener('click', throwCoins)
-    document.querySelector('h2').addEventListener('click', toggleHistory)
+    // document.querySelector('h2').addEventListener('click', toggleHistory)
 
     let funcSpia = document.querySelector('#func')
     if (checkWebWorkers()) {
