@@ -212,6 +212,7 @@ async function throwCoins() {
             linesVal[i] = sum
             if (i === 5) {
                 document.querySelector('#throw').setAttribute('disabled', 'disabled')
+                document.querySelector('#record').removeAttribute('disabled')
                 explain()
             }
             break;
@@ -225,6 +226,7 @@ function reset() {
     document.querySelector('#reset').setAttribute('disabled', 'disabled')
     document.querySelector('#throw').removeAttribute('disabled')
     document.querySelector('label').innerHTML = '&nbsp;'
+    document.querySelector('#record').setAttribute('disabled', 'disabled')
     linesVal.fill(0)
     redraw()
     const response = document.querySelector('#response')
@@ -247,6 +249,9 @@ function toggleHistory() {
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#reset').addEventListener('click', reset)
     document.querySelector('#throw').addEventListener('click', throwCoins)
+    document.querySelector('#record').addEventListener('click', () => {
+        window.open('shortcuts://run-shortcut?name=Registra%20Responso')
+    })
     // document.querySelector('h2').addEventListener('click', toggleHistory)
 
     let funcSpia = document.querySelector('#func')

@@ -10,7 +10,8 @@
     --primary-fg: white;
     --destructive-bg: #e4e4e4;
     --destructive-fg: red;
-    --disable-bg: #c0c0c0;
+    --button-bg: #c0c0c0;
+    --button-fg: #1d1d1d;
     --disable-fg: #919191;
 }
 
@@ -48,9 +49,21 @@ article {
     margin-right: var(--margin);
 }
 
-input[type=button], button {
+input[type=button], button, .button {
+    font-size: 1rem;
+    padding: .6rem 1.4rem;
+    touch-action: manipulation;
     border-radius: 99em;
     border: none;
+    background-color: var(--button-bg);
+    color: var(--button-fg);
+    text-align: center;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input[type=button]:disabled, button:disabled, .button:disabled {
+    color: var(--disable-fg);
 }
 
 input[type=button]:active:enabled, button:active:enabled {
@@ -297,12 +310,6 @@ body#dettami {
 
 /* iching.html */
 
-#iching input {
-    font-size: 1rem;
-    padding: .6rem 1.4rem;
-    touch-action: manipulation;
-}
-
 #iching .symbol {
     fill: var(--foreground);
 }
@@ -374,6 +381,20 @@ body#dettami {
 #iching .panel .name {
     font-size: 1.4rem;
     font-weight: 500;
+}
+
+#iching #func {
+    font-weight: normal;
+}
+
+#iching .no-history {
+    column-span: all;
+    text-align: center;
+    font-style: italic;
+}
+
+#iching .nascosto {
+    display: none;
 }
 
 
