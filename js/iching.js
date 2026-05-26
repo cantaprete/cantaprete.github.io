@@ -172,7 +172,7 @@ function explain() {
     let start = iching.find(h => h.pattern === firstHex)
     let end = iching.find(h => h.pattern === secondHex)
 
-    let label = start.number
+    let label = ''
 
     if (movingLines.length > 0) {
         movingLines.forEach(line => {
@@ -180,7 +180,8 @@ function explain() {
         });
     }
 
-    document.querySelector('label').textContent = label
+    document.querySelector('#res-hex').textContent = start.number
+    document.querySelector('#res-lines').textContent = label
 
     const response = document.querySelector('#response')
     response.append(createLegend(start))
@@ -212,7 +213,7 @@ async function throwCoins() {
             linesVal[i] = sum
             if (i === 5) {
                 document.querySelector('#throw').setAttribute('disabled', 'disabled')
-                document.querySelector('#record').removeAttribute('disabled')
+                // document.querySelector('#record').removeAttribute('disabled')
                 explain()
             }
             break;
@@ -225,7 +226,7 @@ async function throwCoins() {
 function reset() {
     document.querySelector('#reset').setAttribute('disabled', 'disabled')
     document.querySelector('#throw').removeAttribute('disabled')
-    document.querySelector('label').innerHTML = '&nbsp;'
+    document.querySelector('label').innerHTML = '<span id="res-hex">&nbsp;</span><span id="res-lines"></span>'
     // document.querySelector('#record').setAttribute('disabled', 'disabled')
     linesVal.fill(0)
     redraw()

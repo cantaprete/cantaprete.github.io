@@ -404,6 +404,10 @@ body#dettami {
     display: none;
 }
 
+#iching #res-hex {
+    font-weight: bold;
+}
+
 
 
 
