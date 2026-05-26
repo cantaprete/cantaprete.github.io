@@ -81,6 +81,9 @@ input[type=button]:active:enabled, button:active:enabled {
     color: var(--destructive-fg);
 }
 
+.nascosto {
+    display: none;
+}
 
 
 
@@ -102,6 +105,10 @@ input[type=button]:active:enabled, button:active:enabled {
     padding-top: .4rem;
     letter-spacing: .04rem;
     font-weight: 500;
+}
+
+#home nav ul li ul {
+    margin-left: 1rem;
 }
 
 #home h1 {

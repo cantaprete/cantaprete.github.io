@@ -38,6 +38,23 @@ function spaceContent() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', moveTitle)
-document.addEventListener('DOMContentLoaded', spaceContent)
-document.addEventListener('resize', spaceContent)
+function toggleMenu() {
+    let opener = document.querySelector('#opener')
+    let submenu = document.querySelector('#submenu').querySelector('ul')
+    submenu.classList.toggle('nascosto')
+
+    if (submenu.classList.contains('nascosto')) {
+        opener.textContent = '+'
+    } else {
+        opener.textContent = '−'
+    }
+}
+
+// document.addEventListener('DOMContentLoaded', moveTitle)
+// document.addEventListener('DOMContentLoaded', spaceContent)
+// document.addEventListener('resize', spaceContent)
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#submenu').addEventListener('click', toggleMenu)
+    document.querySelector('#opener').textContent = '+'
+})
