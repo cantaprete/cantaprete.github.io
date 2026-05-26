@@ -226,32 +226,32 @@ function reset() {
     document.querySelector('#reset').setAttribute('disabled', 'disabled')
     document.querySelector('#throw').removeAttribute('disabled')
     document.querySelector('label').innerHTML = '&nbsp;'
-    document.querySelector('#record').setAttribute('disabled', 'disabled')
+    // document.querySelector('#record').setAttribute('disabled', 'disabled')
     linesVal.fill(0)
     redraw()
     const response = document.querySelector('#response')
     response.innerHTML = ''
 }
 
-function toggleHistory() {
-    let historyTable = document.querySelector('table')
-    let caret = document.querySelector('.caret')
+// function toggleHistory() {
+//     let historyTable = document.querySelector('table')
+//     let caret = document.querySelector('.caret')
 
-    if (caret.textContent === '▴') {
-        caret.textContent = '▾'
-    } else {
-        caret.textContent = '▴'
-    }
+//     if (caret.textContent === '▴') {
+//         caret.textContent = '▾'
+//     } else {
+//         caret.textContent = '▴'
+//     }
 
-    document.querySelector('table').classList.toggle('nascosto')
-}
+//     document.querySelector('table').classList.toggle('nascosto')
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#reset').addEventListener('click', reset)
     document.querySelector('#throw').addEventListener('click', throwCoins)
-    document.querySelector('#record').addEventListener('click', () => {
-        window.open('shortcuts://run-shortcut?name=Registra%20Responso')
-    })
+    // document.querySelector('#record').addEventListener('click', () => {
+    //     window.open('shortcuts://run-shortcut?name=Registra%20Responso')
+    // })
     // document.querySelector('h2').addEventListener('click', toggleHistory)
 
     let funcSpia = document.querySelector('#func')
