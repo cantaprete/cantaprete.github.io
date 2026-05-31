@@ -38,8 +38,11 @@ function spaceContent() {
     }
 }
 
-function toggleMenu() {
+function toggleMenu(e) {
     let opener = document.querySelector('#opener')
+    if ((e.target !== opener) && (e.target !== document.querySelector('#submenu'))) {
+        return
+    }
     let submenu = document.querySelector('#submenu').querySelector('ul')
     submenu.classList.toggle('nascosto')
 
