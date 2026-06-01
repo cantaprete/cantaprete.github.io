@@ -133,6 +133,10 @@ input[type=button]:active:enabled, button:active:enabled {
     content: " // ";
 }
 
+#home #opener {
+    color: var(--accent);
+}
+
 
 
 
