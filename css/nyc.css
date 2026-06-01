@@ -2,7 +2,7 @@
     --margin: inherit;
     --background: white;
     --foreground: black;
-    --accent: red;
+    --accent: #0000EE;
     --max-width: 40rem;
     --lang-en: aliceblue;
     --lang-it: antiquewhite;
@@ -91,6 +91,11 @@ input[type=button]:active:enabled, button:active:enabled {
 
 #home a {
     text-decoration: none;
+    color: var(--foreground);
+}
+
+#home a:hover {
+    color: var(--accent);
 }
 
 #home nav ul {
