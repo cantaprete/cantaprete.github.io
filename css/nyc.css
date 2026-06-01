@@ -400,10 +400,6 @@ body#dettami {
     font-style: italic;
 }
 
-#iching .nascosto {
-    display: none;
-}
-
 #iching #res-hex {
     font-weight: bold;
 }
