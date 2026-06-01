@@ -36,11 +36,8 @@ body {
     color: var(--foreground);
     background-color: var(--background);
     font-family: sans-serif;
-    padding: 1rem;
-}
-
-a {
-    color: var(--foreground);
+    padding: 0 1rem;
+    margin: 0;
 }
 
 article {
@@ -85,9 +82,22 @@ input[type=button]:active:enabled, button:active:enabled {
     display: none;
 }
 
+footer {
+    font-size: .6rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
 
 
 /* index.html */
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 #home a {
     text-decoration: none;

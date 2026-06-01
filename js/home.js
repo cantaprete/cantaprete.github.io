@@ -25,19 +25,6 @@ function moveTitle() {
     newTitle.after(newEmailWrapper)
 }
 
-function spaceContent() {
-    let navList = document.querySelector('nav')
-    let header = document.querySelector('h1')
-    let email = document.querySelector('#email')
-
-    let windowHeight = window.screen.height
-    let contentHeight = navList.getBoundingClientRect().height + header.getBoundingClientRect().height + email.getBoundingClientRect().height
-    let marginTop = Math.floor((windowHeight - contentHeight) / 2)
-    if (marginTop > 0) {
-        navList.style.marginTop = marginTop + "px"
-    }
-}
-
 function toggleMenu(e) {
     let opener = document.querySelector('#opener')
     if ((e.target !== opener) && (e.target !== document.querySelector('#submenu'))) {
@@ -54,8 +41,6 @@ function toggleMenu(e) {
 }
 
 // document.addEventListener('DOMContentLoaded', moveTitle)
-// document.addEventListener('DOMContentLoaded', spaceContent)
-// document.addEventListener('resize', spaceContent)
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#submenu').addEventListener('click', toggleMenu)
