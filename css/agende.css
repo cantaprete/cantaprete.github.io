@@ -1,0 +1,52 @@
+:root {
+    --background: white;
+    --foreground: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --foreground: white;
+  }
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: sans-serif;
+    padding: 0 1rem;
+    margin: 0;
+}
+
+input[type=submit] {
+    padding: .4rem 1rem;
+    align-self: flex-start;
+    font-size: 1rem;
+}
+
+#input {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#input div {
+    display: flex;
+    flex-direction: row;
+    gap: .4rem;
+    align-items: baseline;
+}
+
+#output {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    #input div {
+        flex-direction: column;
+    }
+}
