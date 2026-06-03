@@ -1,0 +1,43 @@
+:root {
+    --background: white;
+    --foreground: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --foreground: white;
+  }
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    margin: 0;
+    background-color: #bbb;
+    background-image: url(/img/dettami/g50.png);
+    image-rendering: pixelated;
+    min-height: 100%;
+}
+
+#dettami article {
+    display: none;
+}
+
+#dettami img {
+    width: 700px;
+    image-rendering: pixelated;
+    /* filter: drop-shadow(1px 1px 4px #333); */
+}
+
+#dettami .data {
+    text-align: right;
+}
+
+@media only screen and (max-width: 700px) {
+    #dettami img {
+        max-width: 100%;
+    }
+}
