@@ -1,0 +1,73 @@
+:root {
+    --background: white;
+    --foreground: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --foreground: white;
+  }
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: sans-serif;
+    padding: 0 1rem;
+    margin: 0;
+}
+
+#libreria {
+    display: flex;
+    gap: 1.4rem;
+    align-items: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.progetto {
+    filter: grayscale(0%) opacity(100%) blur(0);
+    transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+.progetto img {
+    box-shadow:
+        #32325d40 0px 2px 5px,
+        #0000004d 0px 1px 3px;
+}
+
+.progetto[data-tipo="libro"] img {
+    transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+#selettore {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#selettore select, #selettore input {
+    font-size: 0.8rem;
+}
+
+.secondo-piano {
+    filter: grayscale() opacity(20%) blur(4px);
+    transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+.secondo-piano img {
+    box-shadow: none;
+    transition: var(--animation-speed) filter var(--animation-mode);
+}
+
+label {
+    display: none;
+}
