@@ -1,0 +1,48 @@
+:root {
+    --margin: inherit;
+    --background: white;
+    --foreground: black;
+    --accent: #0000EE;
+    --max-width: 40rem;
+    --lang-en: aliceblue;
+    --lang-it: antiquewhite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --foreground: white;
+    --lang-en: steelblue;
+    --lang-it: indianred;
+  }
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: sans-serif;
+    padding: 0 1rem;
+    margin: 0;
+}
+
+article {
+    max-width: var(--max-width);
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
+span[data-curr-lang=en] {
+    background-color: var(--lang-en);
+}
+
+span[data-curr-lang=it] {
+    background-color: var(--lang-it);
+}
+
+#footnotes {
+    font-size: .8rem;
+}
