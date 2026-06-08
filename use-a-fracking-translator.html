@@ -9,18 +9,35 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="stylesheet" href="/css/frak.css">
-    <script src="/js/use-a-fracking-translator.js"></script>
+    <script src="/js/frak.js"></script>
 </head>
 
 <body id="frak">
     <main>
         <article>
-            <!-- <div id="panel">
-                <button id="slower">🐢</button>
-                <button id="faster">🐇</button>
-            </div> -->
             <header id="title-block-header">
                 <h1 class="title">Use a fracking translator</h1>
+                <div id="opener">+</div>
+                <div id="panel" class="nascosto">
+                    <div id="speed-panel">
+                        <div>🐢</div>
+                        <input type="range" min="0" max="100" name="speed" id="speed">
+                        <div>🐇</div>
+                    </div>
+                    <div id="lang-panel">
+                        <div>🇮🇹</div>
+                        <input type="range" min="-1" max="1" name="lang" id="lang">
+                        <div>🇬🇧</div>
+                    </div>
+                    <div id="hl-panel">
+                        <div>🖍️</div>
+                        <input type="checkbox" name="highlight" id="highlight">
+                    </div>
+                    <div id="bp-panel">
+                        <div>🔊</div>
+                        <input type="checkbox" name="beep" id="beep">
+                    </div>
+                </div>
             </header>
             <p>
                 <span data-curr-lang="en" data-lang-en="Those" data-lang-it="Coloro">Those</span>
@@ -64,7 +81,7 @@
                 <span data-curr-lang="en" data-lang-en="of" data-lang-it="di">of</span>
                 <span data-curr-lang="en" data-lang-en="many" data-lang-it="molte">many</span>
                 <span data-curr-lang="en" data-lang-en="things" data-lang-it="cose">things.</span>
-                <span data-curr-lang="en" data-lang-en="There is" data-lang-it="C'è">There is</span>,
+                <span data-curr-lang="en" data-lang-en="There is" data-lang-it="C’è">There is</span>,
 
                 <span data-curr-lang="en" data-lang-en="for" data-lang-it="per">for</span>
                 <span data-curr-lang="en" data-lang-en="instance" data-lang-it="esempio">instance</span>,

@@ -1,7 +1,34 @@
+@font-face {
+    font-family: Newsreader;
+    src: url(/fonts/nws-reg.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Newsreader;
+    src: url(/fonts/nws-ita.woff2);
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(/fonts/rbk-reg.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(/fonts/rbk-ita.woff2);
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
-    --margin: inherit;
+    --margin: auto;
     --background: white;
     --foreground: black;
+    --modal: #eeeeee;
     --accent: #0000EE;
     --max-width: 40rem;
     --lang-en: aliceblue;
@@ -12,6 +39,7 @@
   :root {
     --background: black;
     --foreground: white;
+    --modal: #565656;
     --lang-en: steelblue;
     --lang-it: indianred;
   }
@@ -24,8 +52,9 @@ html {
 body {
     color: var(--foreground);
     background-color: var(--background);
-    font-family: sans-serif;
+    font-family: Newsreader, serif;
     padding: 0 1rem;
+    font-size: 1.16rem;
     margin: 0;
 }
 
@@ -33,16 +62,79 @@ article {
     max-width: var(--max-width);
     margin-left: var(--margin);
     margin-right: var(--margin);
+    text-align: justify;
+}
+
+header {
+    text-align: center;
+    margin: 8rem 0 6rem 0;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+#opener {
+    font-size: 2rem;
+}
+
+#panel {
+    max-width: 12rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border: 1px solid var(--foreground);
+    border-radius: 4px;
+    background-color: var(--modal);
+}
+
+#panel > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#speed-panel input {
+    max-width: 100%;
+    margin: 0 .4rem;
 }
 
 span[data-curr-lang=en] {
-    background-color: var(--lang-en);
+    font-family: Rubik;
+    font-size: 1rem;
 }
 
 span[data-curr-lang=it] {
+    font-family: Newsreader;
+    font-size: 1.16rem;
+}
+
+.highlighted[data-curr-lang=en] {
+    background-color: var(--lang-en);
+}
+
+.highlighted[data-curr-lang=it] {
     background-color: var(--lang-it);
 }
 
 #footnotes {
     font-size: .8rem;
+    margin-top: 2rem;
+}
+
+hr {
+    max-width: 6rem;
+    margin: 0;
+}
+
+#footnotes span[data-curr-lang=it] {
+    font-size: .96rem;
+}
+
+#footnotes span[data-curr-lang=en] {
+    font-size: .8rem;
+}
+
+.nascosto {
+    display: none;
 }
