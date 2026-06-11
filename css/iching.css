@@ -94,6 +94,7 @@ h1 {
 
 .btn,
 .btn-default {
+    touch-action: manipulation;
     min-height: 20px;
     min-width: 59px;
     padding: 0 20px;
