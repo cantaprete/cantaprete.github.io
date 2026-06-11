@@ -66,7 +66,7 @@ const iching = [
 ]
 
 const lineSymbols = {
-    0: '<svg width="120" height="24" xmlns="http://www.w3.org/2000/svg"><path class="possibilities" d="M38.929-35.918v4h9.997l-.007 10 4.001.002.007-10.001H62.93v-4l-10-.001.008-9.998-4-.004-.007 10.003z" transform="rotate(45)" stroke-width="1" stroke-dasharray="1 3"/><path class="possibilities" d="M60 2a10 10 0 00-10 10 10 10 0 0010 10 10 10 0 0010-10A10 10 0 0060 2zm0 3a7 7 0 017 7 7 7 0 01-7 7 7 7 0 01-7-7 7 7 0 017-7z" stroke-dasharray="1 3" /><path class="possibilities" d="M.746 5.996h118.508v12.008H.746zM50.098 5.25v13.5M72 5.25v13.5" stroke-dasharray="1 3" /></svg>',
+    0: '<svg width="120" height="24" xmlns="http://www.w3.org/2000/svg"><path class="possibilities modifier" d="M38.929-35.918v4h9.997l-.007 10 4.001.002.007-10.001H62.93v-4l-10-.001.008-9.998-4-.004-.007 10.003z" transform="rotate(45)" /><path class="possibilities modifier" d="M60 2a10 10 0 00-10 10 10 10 0 0010 10 10 10 0 0010-10A10 10 0 0060 2zm0 3a7 7 0 017 7 7 7 0 01-7 7 7 7 0 01-7-7 7 7 0 017-7z" /><path class="possibilities" d="M.746 5.996h118.508v12.008H.746zM50.098 5.25v13.5M72 5.25v13.5" /></svg>',
     6: '<svg width="120" height="24" xmlns="http://www.w3.org/2000/svg"><path class="symbol" d="M0 6v12h48V6zm72 0v12h48V6z" /><path class="modifier" d="M52.926 2.107l-2.828 2.83 7.072 7.067-7.072 7.068 2.828 2.83L60 14.832l7.076 7.07 2.826-2.83-7.072-7.068 7.072-7.066-2.826-2.83L60 9.177z" /></svg>',
     7: '<svg width="120" height="24" xmlns="http://www.w3.org/2000/svg"><path class="symbol" d="M0 6h120v12H0z"/></svg>',
     8: '<svg width="120" height="24" xmlns="http://www.w3.org/2000/svg"><path class="symbol" d="M0 6v12h48V6zm72 0v12h48V6z" /></svg>',
@@ -185,6 +185,7 @@ function explain() {
 
     const response = document.querySelector('#response')
     response.append(createLegend(start))
+    response.classList.remove('nascosto')
 
     if (firstHex !== secondHex) {
         response.append(createLegend(end))
@@ -227,41 +228,21 @@ function reset() {
     document.querySelector('#reset').setAttribute('disabled', 'disabled')
     document.querySelector('#throw').removeAttribute('disabled')
     document.querySelector('label').innerHTML = '<span id="res-hex">&nbsp;</span><span id="res-lines"></span>'
-    // document.querySelector('#record').setAttribute('disabled', 'disabled')
     linesVal.fill(0)
     redraw()
     const response = document.querySelector('#response')
     response.innerHTML = ''
+    response.classList.add('nascosto')
 }
-
-// function toggleHistory() {
-//     let historyTable = document.querySelector('table')
-//     let caret = document.querySelector('.caret')
-
-//     if (caret.textContent === '▴') {
-//         caret.textContent = '▾'
-//     } else {
-//         caret.textContent = '▴'
-//     }
-
-//     document.querySelector('table').classList.toggle('nascosto')
-// }
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#reset').addEventListener('click', reset)
     document.querySelector('#throw').addEventListener('click', throwCoins)
-    // document.querySelector('#record').addEventListener('click', () => {
-    //     window.open('shortcuts://run-shortcut?name=Registra%20Responso')
-    // })
-    // document.querySelector('h2').addEventListener('click', toggleHistory)
 
-    let funcSpia = document.querySelector('#func')
     if (checkWebWorkers()) {
-        funcSpia.textContent = '⊙'
-        funcSpia.setAttribute('title', 'WebWorker disponibili')
+        console.log('WebWorker disponibili')
     } else {
-        funcSpia.textContent = '⊚'
-        funcSpia.setAttribute('title', 'WebWorker non disponibili')
+        console.log('WebWorker non disponibili')
     }
 })
 

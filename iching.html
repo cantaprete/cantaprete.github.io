@@ -9,29 +9,35 @@
 	<meta name="author" content="Jacopo Donati">
 	<link rel="icon" href="/favicon.ico" sizes="48x48">
 	<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+	<!-- <link rel="stylesheet" href="/css/system7.css"> -->
 	<link rel="stylesheet" href="/css/iching.css">
 	<script src="/js/iching.js"></script>
 </head>
 
 <body id="iching">
-	<h1>I Ching <span id="func"></span></h1>
-	<div id="container">
-		<div id="hex" class="panel">
-			<label><span id="res-hex">&nbsp;</span><span id="res-lines"></span></label>
-			<div id="line-1" class="line"></div>
-			<div id="line-2" class="line"></div>
-			<div id="line-3" class="line"></div>
-			<div id="line-4" class="line"></div>
-			<div id="line-5" class="line"></div>
-			<div id="line-6" class="line"></div>
+	<div id="container" class="window">
+		<div class="title-bar">
+			<h1 class="title">I Ching</h1>
 		</div>
-		<div id="controls">
-			<input type="button" value="Lancia" id="throw" class="primary">
-			<input type="button" value="Reimposta" id="reset" class="destructive">
-			<!-- <input type="button" value="Registra" id="record" href="shortcuts://run-shortcut?name=Registra%20Responso" disabled="disabled"> -->
+		<div class="window-pane">
+			<div id="hor-pan">
+				<div id="hex" class="panel">
+					<label><span id="res-hex">&nbsp;</span><span id="res-lines"></span></label>
+					<div id="line-1" class="line"></div>
+					<div id="line-2" class="line"></div>
+					<div id="line-3" class="line"></div>
+					<div id="line-4" class="line"></div>
+					<div id="line-5" class="line"></div>
+					<div id="line-6" class="line"></div>
+				</div>
+				<div id="controls">
+					<input type="button" value="Lancia" id="throw" class="btn btn-default">
+					<input type="button" value="Reimposta" id="reset" class="btn">
+				</div>
+			</div>
 		</div>
 	</div>
-	<div id="response">
+	<div id="response" class="nascosto">
 	</div>
 </body>
 </html>

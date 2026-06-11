@@ -1,77 +1,148 @@
+@font-face {
+    font-family: Chicago;
+    src: url(/fonts/chi-reg.woff2);
+    font-display: swap;
+}
+
 :root {
     --margin: inherit;
     --background: white;
     --foreground: black;
     --accent: #ee0000;
-    --max-width: 40rem;
-    --primary-bg: #3478f6;
-    --primary-fg: white;
-    --destructive-bg: #e4e4e4;
-    --destructive-fg: red;
+    --max-width: 21.4rem;
     --button-bg: #c0c0c0;
     --button-fg: #1d1d1d;
-    --disable-fg: #919191;
+    --disabled: #B6B7B8;
+    --pixel-size: 1;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: black;
-    --foreground: white;
-  }
+    :root {
+        --background: black;
+        --foreground: white;
+    }
 }
 
-html {
-    font-size: 16px;
+/* @media (min-resolution: 2x) {
+    :root {
+        --pixel-size: 2;
+    }
 }
+
+@media (min-resolution: 3x) {
+    :root {
+        --pixel-size: 3;
+    }
+} */
 
 body {
     color: var(--foreground);
-    background-color: var(--background);
-    font-family: sans-serif;
-    padding: 0 1rem;
+    image-rendering: pixelated;
+    font-family: Chicago, sans-serif;
+    padding: 1rem;
     margin: 0;
+    border-top: 1px solid black;
+    background: linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background)), linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background));
+    background-color: var(--foreground);
+    background-size: 2px 2px;
+    background-position: 0 0, 1px 1px;
 }
 
-article {
+h1 {
+    font-family: Chicago;
+    font-size: 1.5em;
+}
+
+.window {
+    flex-direction: column;
+    margin: 1rem auto;
+    min-width: 320px;
     max-width: var(--max-width);
-    margin-left: var(--margin);
-    margin-right: var(--margin);
+    overflow: hidden;
+    background-color: var(--background);
+    border: 1px solid var(--foreground);
+    font-family: Chicago, sans-serif;
+    box-shadow: 1px 0px 0px var(--foreground),
+        0px 1px 0px var(--foreground),
+        1px 1px 0px var(--foreground);
 }
 
-input[type=button], button, .button {
-    font-size: 1rem;
-    padding: .6rem 1.4rem;
-    touch-action: manipulation;
-    border-radius: 99em;
-    border: none;
-    background-color: var(--button-bg);
-    color: var(--button-fg);
+.title-bar {
+    flex: none;
+    display: flex;
+    align-items: center;
+    height: 15px;
+    image-rendering: pixelated;
+    padding: 3px 2px;
+    background: linear-gradient(var(--foreground) 50%, transparent 50%);
+    background-size: 1px 2px;
+    background-clip: content-box;
+    /* border-bottom: 1px solid var(--foreground); */
+}
+
+.title-bar .title {
+    padding: 0 4px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: .8;
+    text-align: center;
+    background: var(--background);
+    cursor: default;
+    font-family: Chicago;
+}
+
+.btn,
+.btn-default {
+    min-height: 20px;
+    min-width: 59px;
+    padding: 0 20px;
+    text-align: center;
+    background: var(--background);
+    border-style: solid;
+    border-width: 5.5px;
+    border-image: url("/img/iching/button.svg") 30 stretch;
+    color: var(--foreground);
     text-align: center;
     text-decoration: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-family: Chicago, sans-serif;
+    cursor: pointer;
 }
 
-input[type=button]:disabled, button:disabled, .button:disabled {
-    color: var(--disable-fg);
-}
-
-input[type=button]:active:enabled, button:active:enabled {
-    background-color: var(--background);
+.btn:active {
+    background: var(--background);
+    border-radius: 6px;
     color: var(--foreground);
+    font-family: Chicago;
 }
 
-.primary:enabled {
-    background-color: var(--primary-bg);
-    color: var(--primary-fg);
+.btn:disabled {
+    min-height: 20px;
+    min-width: 59px;
+    text-align: center;
+    background: var(--background);
+    border-style: solid;
+    border-width: 5.5px;
+    border-image: url("/img/iching/button.svg") 30 stretch;
+    color: var(--disabled);
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Chicago, sans-serif;
 }
 
-.destructive:enabled {
-    background-color: var(--destructive-bg);
-    color: var(--destructive-fg);
+.btn-default {
+    border-image: url("/img/iching/button-default.svg") 60 stretch;
+    border-width: 0.5em;
+}
+
+.btn-default:active {
+    border-radius: 12px;
 }
 
 .nascosto {
-    display: none;
+    display: none !important;
 }
 
 .symbol {
@@ -85,13 +156,16 @@ input[type=button]:active:enabled, button:active:enabled {
 .possibilities {
     fill: transparent;
     stroke: var(--foreground);
+    stroke-dasharray: 1 1;
+    stroke-width: 1;
+}
+
+.possibilities.modifier {
+    display: none;
 }
 
 #container {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin: 2rem 0;
+    margin: 1rem;
 }
 
 #container #hex {
@@ -109,6 +183,12 @@ input[type=button]:active:enabled, button:active:enabled {
     height: 24px;
 }
 
+#hor-pan {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
 #container #controls {
     display: flex;
     flex-direction: column;
@@ -119,6 +199,11 @@ input[type=button]:active:enabled, button:active:enabled {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: var(--background);
+    border: 1px solid var(--foreground);
+    max-width: var(--max-width);
+    margin-left: 2.4rem;
+    padding: 1rem 2rem;
 }
 
 #response .legend {
