@@ -167,11 +167,11 @@ h1 {
     flex-direction: column-reverse;
 }
 
-#container #hex label {
+#container #controls label {
     text-align: center;
-    margin-top: .4rem;
     font-family: Geneva, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
 }
 
 .line {
@@ -225,7 +225,7 @@ h1 {
 }
 
 .panel .name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
