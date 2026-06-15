@@ -20,12 +20,14 @@
     --button-fg: #1d1d1d;
     --disabled: #B6B7B8;
     --pixel-size: 1;
+    --body-bg: linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background)), linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background));
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: black;
         --foreground: white;
+        --body-bg: linear-gradient(45deg, var(--background) 50%, transparent 75%, var(--background) 75%, var(--background)), linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background));
     }
 }
 
@@ -36,7 +38,7 @@ body {
     padding: 1rem;
     margin: 0;
     border-top: 1px solid black;
-    background: linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background)), linear-gradient(45deg, var(--background) 25%, transparent 25%, transparent 75%, var(--background) 75%, var(--background));
+    background: var(--body-bg);
     background-color: var(--foreground);
     background-size: 2px 2px;
     background-position: 0 0, 1px 1px;
