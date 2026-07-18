@@ -16,20 +16,35 @@
 
 <body id="agende">
 	<main>
-		<h1>Calcolatore di agende vetuste</h1>
-		<div id="input">
-			<div>
-				<label for="anno">Anno da imitare:</label>
-				<input type="number" name="anno" id="anno">
+		<div class="window" style="width: 300px">
+			<div class="title-bar">
+				<div class="title-bar-text">Calcolatore di agende vetuste</div>
 			</div>
-			<div>
-				<label for="soglia">Inizio ricerca:</label>
-				<input type="number" name="soglia" id="soglia" value="1900">
+			<div class="window-body">
+				<div id="input">
+					<fieldset>
+						<legend>Dati di partenza</legend>
+						<div class="field-row-stacked">
+							<label for="anno">Anno da imitare:</label>
+							<input type="number" name="anno" id="anno">
+						</div>
+						<div class="field-row-stacked">
+							<label for="soglia">Inizio ricerca:</label>
+							<input type="number" name="soglia" id="soglia" value="1900">
+						</div>
+					</fieldset>
+					<div id="right">
+						<input type="submit" name="trova" id="trova" value="Calcola">
+					</div>
+				</div>
+				<div id="output">
+				</div>
 			</div>
-			<input type="submit" name="trova" id="trova" value="Calcola">
 		</div>
-		<div id="output">
-		</div>
+
+
+
+
 	</main>
 </body>
 
