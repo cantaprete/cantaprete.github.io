@@ -4,7 +4,7 @@
   "id": "it.jacopodonati.iching",
   "start_url": "/iching.html",
   "orientation": "portrait",
-  "display": "standanlone",
+  "display": "standalone",
   "dir": "ltr",
   "lang": "it",
   "background_color": "#ffffff",
