@@ -2,6 +2,7 @@
   "name": "I Ching",
   "description": "Tira le monetine. (non è un simulatore di Tangentopoli.)",
   "id": "it.jacopodonati.iching",
+  "short_name": "I Ching",
   "start_url": "/iching.html",
   "orientation": "portrait",
   "display": "standalone",
@@ -11,22 +12,31 @@
   "theme_color": "#7d7d7d",
   "icons": [
     {
-      "src": "/img/iching/pwa-1024.png",
+      "src": "/img/iching/iching-1024.png",
+      "size": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/iching/iching-1024-mask.png",
       "size": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/img/iching/pwa-512-mask.png",
+      "src": "/img/iching/iching-512.png",
+      "size": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/iching/iching-512-mask.png",
       "size": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/img/iching/pwa-192-mask.png",
+      "src": "/img/iching/iching-192.png",
       "size": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ],
   "categories": [
