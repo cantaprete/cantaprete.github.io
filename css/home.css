@@ -40,8 +40,9 @@ nav ul {
 
 nav ul li {
     text-transform: lowercase;
-    padding-bottom: .4rem;
-    padding-top: .4rem;
+    /* padding-bottom: .2rem;
+    padding-top: .2rem; */
+    line-height: 1.6rem;
     letter-spacing: .04rem;
     font-weight: 500;
 }
@@ -50,15 +51,26 @@ nav ul li ul {
     margin-left: 1rem;
 }
 
+#parafernalia {
+    margin-top: .4rem;
+    font-size: .8rem;
+}
+#parafernalia li {
+    line-height: 1.4rem;
+}
+
 h1 {
-    text-transform: uppercase;
+    /* text-transform: uppercase;
     letter-spacing: .1rem;
-    font-size: 1.6rem;
+    font-size: 1.6rem; */
+    /* letter-spacing: -.025em; */
+    font-size: 44px;
     padding-top: 1rem;
     margin-top: 1rem;
     margin-bottom: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     padding-bottom: 0;
+    font-weight: 800;
 }
 
 #email {
