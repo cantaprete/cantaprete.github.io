@@ -32,11 +32,17 @@ a:hover {
     color: var(--accent);
 }
 
+footer {
+    font-size: .8rem;
+    column-count: 3;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-		font-size: 1.2rem;
 }
 
 nav ul li {
@@ -52,38 +58,48 @@ nav ul li ul {
 
 #parafernalia {
     margin-top: .4rem;
-    font-size: 1rem;
 }
 #parafernalia li {
-    line-height: 1.5rem;
+    line-height: 1.2rem;
 }
 
 h1 {
     font-size: 1rem;
     padding-top: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    margin-bottom: 4rem;
     padding-bottom: 0;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
     font-weight: 400;
 }
 
-#email {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 0;
-    margin-top: .4rem;
-    margin-left: 4rem;
+#libreria {
+    display: flex;
+    gap: 1.4rem;
+    align-items: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
 }
 
-#email::before {
-    content: " // ";
+.progetto {
+    filter: grayscale(0%) opacity(100%) blur(0);
+    transition: var(--animation-speed) filter var(--animation-mode);
 }
 
-#opener {
-    color: var(--accent);
+.progetto img {
+    box-shadow:
+        #32325d40 0px 2px 5px,
+        #0000004d 0px 1px 3px;
 }
 
-.nascosto {
-    display: none;
+@media (max-width: 750px) {
+    footer {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 520px) {
+    footer {
+        column-count: 1;
+    }
 }

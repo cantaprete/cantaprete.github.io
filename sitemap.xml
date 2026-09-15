@@ -1,7 +1,7 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
         <loc>https://www.jacopodonati.it/index.html</loc>
-        <lastmod>2026-09-02 09:29:05</lastmod>
+        <lastmod>2026-09-14 13:57:05</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://www.jacopodonati.it/dettami.html</loc>
@@ -22,9 +22,5 @@
     <sitemap>
         <loc>https://www.jacopodonati.it/guida-sviluppo.html</loc>
         <lastmod>2026-02-12T07:39:23Z</lastmod>
-    </sitemap>
-    <sitemap>
-        <loc>https://www.jacopodonati.it/libri.html</loc>
-        <lastmod>2026-05-06T16:02:00Z</lastmod>
     </sitemap>
 </sitemapindex>
