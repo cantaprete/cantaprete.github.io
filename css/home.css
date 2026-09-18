@@ -34,7 +34,7 @@ a:hover {
 
 footer {
     font-size: .8rem;
-    column-count: 3;
+    /* column-count: 3; */
     margin-top: 4rem;
     margin-bottom: 2rem;
 }
@@ -43,6 +43,9 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 1rem;
 }
 
 nav ul li {
@@ -92,7 +95,7 @@ h1 {
         #0000004d 0px 1px 3px;
 }
 
-@media (max-width: 750px) {
+/* @media (max-width: 750px) {
     footer {
         column-count: 2;
     }
@@ -102,4 +105,4 @@ h1 {
     footer {
         column-count: 1;
     }
-}
+} */
