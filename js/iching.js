@@ -247,3 +247,11 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener('DOMContentLoaded', reset)
+
+window.addEventListener('load', () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/js/iching-sw.js').catch(error => {
+            console.error('Registrazione service worker non riuscita:', error)
+        })
+    }
+})
