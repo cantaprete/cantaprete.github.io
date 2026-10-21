@@ -2,14 +2,15 @@
     --background: white;
     --foreground: black;
     --accent: #0000EE;
+    --max-width-text: 80ch;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: black;
-    --foreground: white;
+    :root {
+        --background: black;
+        --foreground: white;
         --accent: #FFFF11;
-  }
+    }
 }
 
 html {
@@ -20,7 +21,7 @@ body {
     color: var(--foreground);
     background-color: var(--background);
     font-family: sans-serif;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     margin: 0;
 }
 
@@ -33,6 +34,9 @@ a {
 footer {
     font-size: .8rem;
     /* column-count: 3; */
+    margin: 4rem 1rem 2rem 1rem;
+}
+
 footer a {
     text-decoration: none;
     color: var(--foreground);
@@ -73,11 +77,16 @@ nav ul li ul {
 
 h1 {
     font-size: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 0;
+    padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 4rem;
     font-weight: 400;
+}
+
+h2 {
+    font-size: .9rem;
+    font-weight: normal;
+    margin: 2rem 0 1rem 0;
 }
 
 #libreria {
@@ -85,8 +94,10 @@ h1 {
     gap: 1.4rem;
     align-items: end;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1rem;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
+    margin: 1rem 0;
+    padding: 1rem;
 }
 
 .progetto {
@@ -100,14 +111,20 @@ h1 {
         #0000004d 0px 1px 3px;
 }
 
+#bio {
+    padding: 0 1rem;
+    line-height: 1.6rem;
+    max-width: var(--max-width-text);
+}
+
 /* @media (max-width: 750px) {
     footer {
         column-count: 2;
-    }
+}
 }
 
 @media (max-width: 520px) {
     footer {
         column-count: 1;
-    }
+}
 } */
