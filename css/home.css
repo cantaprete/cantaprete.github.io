@@ -8,6 +8,7 @@
   :root {
     --background: black;
     --foreground: white;
+        --accent: #FFFF11;
   }
 }
 
@@ -24,19 +25,22 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: var(--foreground);
-}
-
-a:hover {
+    /* text-decoration: none; */
     color: var(--accent);
 }
+
 
 footer {
     font-size: .8rem;
     /* column-count: 3; */
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+footer a {
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent);
 }
 
 nav ul {
@@ -62,6 +66,7 @@ nav ul li ul {
 #parafernalia {
     margin-top: .4rem;
 }
+
 #parafernalia li {
     line-height: 1.2rem;
 }
@@ -85,7 +90,7 @@ h1 {
 }
 
 .progetto {
-    filter: grayscale(0%) opacity(100%) blur(0);
+    /* filter: grayscale(0%) opacity(100%) blur(0); */
     transition: var(--animation-speed) filter var(--animation-mode);
 }
 
