@@ -13,29 +13,29 @@
   "icons": [
     {
       "src": "/img/iching/iching-1024.png",
-      "size": "1024x1024",
+      "sizes": "1024x1024",
       "type": "image/png"
     },
     {
       "src": "/img/iching/iching-1024-mask.png",
-      "size": "1024x1024",
+      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
       "src": "/img/iching/iching-512.png",
-      "size": "512x512",
+      "sizes": "512x512",
       "type": "image/png"
     },
     {
       "src": "/img/iching/iching-512-mask.png",
-      "size": "512x512",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
       "src": "/img/iching/iching-192.png",
-      "size": "192x192",
+      "sizes": "192x192",
       "type": "image/png"
     }
   ],
