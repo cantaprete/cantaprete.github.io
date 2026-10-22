@@ -160,6 +160,7 @@ aside {
 
 #top-menu ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -168,7 +169,35 @@ aside {
     max-width: var(--max-width-text);
 }
 
+#manoscritti picture,
+#manoscritti img {
+    object-fit: contain;
+}
+
 .monospace {
     font-family: monospace;
     padding: 0 .4rem;
+}
+
+@media (max-width: 480px) {
+    #manoscritti {
+        overflow: hidden;
+        position: relative;
+    }
+
+    #manoscritti picture,
+    #manoscritti img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    aside {
+        max-width: initial;
+        float: initial;
+        margin: 0;
+        font-size: inherit;
+    }
 }
