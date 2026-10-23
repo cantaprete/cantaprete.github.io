@@ -1,30 +1,31 @@
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <sitemap>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
         <loc>https://www.jacopodonati.it/index.html</loc>
         <lastmod>2026-10-23T04:58:33Z</lastmod>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
         <loc>https://www.jacopodonati.it/dettami.html</loc>
         <lastmod>2025-03-19T12:48:37Z</lastmod>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
         <loc>https://www.jacopodonati.it/iching.html</loc>
         <lastmod>2025-11-09T12:44:26Z</lastmod>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
         <loc>https://www.jacopodonati.it/calcolatore-agende-vetuste.html</loc>
         <lastmod>2025-11-09T12:44:44Z</lastmod>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
         <loc>https://www.jacopodonati.it/use-a-fracking-translator.html</loc>
         <lastmod>2025-11-09T15:37:11Z</lastmod>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
         <loc>https://www.jacopodonati.it/guida-sviluppo.html</loc>
         <lastmod>2026-02-12T07:39:23Z</lastmod>
-    </sitemap>
-    <sitemap>
+    </url>
+    <url>
         <loc>https://www.jacopodonati.it/editing.html</loc>
         <lastmod>2026-10-22T16:46:41Z</lastmod>
-    </sitemap>
-</sitemapindex>
+    </url>
+</urlset>
