@@ -49,4 +49,4 @@ User-agent: Webzio-Extended
 User-agent: YouBot
 Disallow: /
 
-Sitemap: https://jacopodonati.it/sitemap.xml
+Sitemap: https://www.jacopodonati.it/sitemap.xml
