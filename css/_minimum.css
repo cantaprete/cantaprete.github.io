@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "EB Garamond";
+    src: url(/fonts/eb-reg.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "EB Garamond";
+    src: url(/fonts/eb-ita.woff2);
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "DMMono";
+    src: url(/fonts/dm-reg.woff2);
+    font-display: swap;
+}
+
+
+:root {
+    --background: white;
+    --foreground: black;
+    --accent: #0000EE;
+    --max-width-text: 60ch;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: black;
+        --foreground: white;
+        --accent: #FFFF11;
+    }
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: "EB Garamond", serif;
+    padding: 1rem;
+}
+
+a {
+    color: var(--accent);
+}
+
+strong {
+    font-weight: 580;
+}
+
+footer {
+    font-size: .8rem;
+    margin: 4rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+header {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+header p {
+    font-size: .8rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: 2rem;
+}
+
+main {
+    max-width: var(--max-width-text);
+    line-height: 1.6;
+}
+
+.small {
+    font-size: .8rem;
+}
