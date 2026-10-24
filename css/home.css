@@ -79,12 +79,19 @@ nav ul li ul {
     line-height: 1.2rem;
 }
 
-h1 {
-    font-size: 1rem;
+header {
     padding: 1rem;
     margin-top: 1rem;
     margin-bottom: 4rem;
+}
+
+h1 {
+    font-size: 1rem;
     font-weight: 400;
+}
+
+header p {
+    font-size: .8rem;
 }
 
 h2 {
