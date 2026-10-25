@@ -49,7 +49,7 @@ footer a:hover {
 
 header {
     margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 }
 
 h1 {
@@ -74,4 +74,8 @@ main {
 
 .small {
     font-size: .8rem;
+}
+
+.right {
+    float: right;
 }

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.jacopodonati.it/index.html</loc>
-        <lastmod>2026-10-24T16:32:11Z</lastmod>
+        <lastmod>2026-10-25T10:26:13Z</lastmod>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/libri.html</loc>
@@ -29,7 +29,11 @@
         <lastmod>2026-02-12T07:39:23Z</lastmod>
     </url>
     <url>
-        <loc>https://www.jacopodonati.it/editing</loc>
+        <loc>https://www.jacopodonati.it/editing/</loc>
         <lastmod>2026-10-24T09:52:50Z</lastmod>
+    </url>
+    <url>
+        <loc>https://www.jacopodonati.it/chi-sono/</loc>
+        <lastmod>2026-10-25T10:25:54Z</lastmod>
     </url>
 </urlset>

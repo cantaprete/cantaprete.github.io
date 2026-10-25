@@ -57,5 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         selettore.addEventListener('change', impostaFiltro)
     })
 
-    resetButton.addEventListener('click', resetta)
+    if (resetButton) {
+        resetButton.addEventListener('click', resetta)
+    }
 })
