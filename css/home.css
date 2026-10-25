@@ -1,14 +1,33 @@
 @import url(_minimum.css);
 
+:root {
+    --editing-bg-color: #faebd7;
+    --schede-bg-color: #f1fad7;
+    --corsi-bg-color: #d7ebfa;
+    --editing-fg-color: #885410;
+    --schede-fg-color: #566f0c;
+    --corsi-fg-color: #0c586f;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --editing-fg-color: #faebd7;
+        --schede-fg-color: #f1fad7;
+        --corsi-fg-color: #d7ebfa;
+        --editing-bg-color: #885410;
+        --schede-bg-color: #566f0c;
+        --corsi-bg-color: #0c586f;
+    }
+}
+
 section {
     margin-bottom: 2rem;
 }
 
 .cta {
-    font-size: .6rem;
+    font-size: .8rem;
     text-align: right;
     margin: 0 3rem;
-    font-family: "DMMono", monospace;
     text-transform: lowercase;
 }
 
@@ -17,8 +36,13 @@ section {
     text-decoration: none;
 }
 
-.cta a::before { content: "[ "; }
-.cta a::after { content: " ]"; }
+.cta a::before {
+    content: "[ ";
+}
+
+.cta a::after {
+    content: " ]";
+}
 
 .evidenziato {
     padding: 0 .4rem;
@@ -26,16 +50,16 @@ section {
 }
 
 .ser-editing {
-    background-color: #faebd7;
-    color: #885410;
+    background-color: var(--editing-bg-color);
+    color: var(--editing-fg-color);
 }
 
 .ser-schede {
-    background-color: #f1fad7;
-    color: #566f0c;
+    background-color: var(--schede-bg-color);
+    color: var(--schede-fg-color);
 }
 
 .ser-corsi {
-    background-color: #d7ebfa;
-    color: #0c586f;
+    background-color: var(--corsi-bg-color);
+    color: var(--corsi-fg-color);
 }
