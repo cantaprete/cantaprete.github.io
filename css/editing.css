@@ -7,10 +7,10 @@
 }
 
 aside {
-    max-width: 28ch;
+    max-width: 50%;
     float: right;
     font-size: .8rem;
-    margin: 0 0 1rem 1rem;
+    margin: 0 0 .4rem 1rem;
 }
 
 .inter {
