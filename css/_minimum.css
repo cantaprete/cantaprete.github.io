@@ -1,3 +1,36 @@
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-reg.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-ita.woff2);
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-med.woff2);
+    font-display: swap;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-seb.woff2);
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Woz Mono";
+    src: url(/fonts/sfm-reg.woff2);
+    font-display: swap;
+}
+
 :root {
     --background: white;
     --foreground: black;
@@ -20,7 +53,7 @@ html {
 body {
     color: var(--foreground);
     background-color: var(--background);
-    font-family: sans-serif;
+    font-family: "Woz Pro", serif;
     padding: 1rem;
 }
 
@@ -49,7 +82,7 @@ footer a:hover {
 
 header {
     margin-top: 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 10rem;
 }
 
 h1 {
@@ -65,11 +98,22 @@ h2 {
     font-size: 1rem;
     font-weight: normal;
     margin-top: 2rem;
+    font-weight: 500;
 }
 
 main {
     max-width: var(--max-width-text);
     line-height: 1.6;
+}
+
+.mono {
+    font-family: "Woz Mono", monospace;
+    padding: 0 .1rem;
+}
+
+.smallcaps {
+    letter-spacing: .1rem;
+    font-size: .9rem;
 }
 
 .small {
@@ -78,4 +122,9 @@ main {
 
 .right {
     float: right;
+}
+
+#bottom-menu {
+    margin-top: 3rem;
+    font-size: .8rem;
 }
