@@ -1,0 +1,14 @@
+{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Come fare la sinossi del tuo manoscritto",
+        "description": "Come scrivere una sinossi che possa essere inviata ad agenti letterari ed editori.",
+        "author": {
+            "@type": "Person",
+            "@id": "https://www.jacopodonati.it/#person",
+            "name": "Jacopo Donati"
+        },
+        "mainEntityOfPage": "https://www.jacopodonati.it/come-fare-la-sinossi/",
+        "datePublished": "2026-10-25",
+        "dateModified": "2026-10-25"
+    }

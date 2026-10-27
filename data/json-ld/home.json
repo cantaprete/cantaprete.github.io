@@ -1,0 +1,30 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.jacopodonati.it/#person",
+    "name": "Jacopo Donati",
+    "url": "https://www.jacopodonati.it",
+    "image": "https://www.jacopodonati.it/img/jacopo-donati.jpg",
+    "jobTitle": [
+        "Editor",
+        "Scrittore",
+        "Docente di Scrittura Creativa"
+    ],
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Bottega Finzioni",
+        "url": "https://www.bottegafinzioni.it"
+    },
+    "knowsAbout": [
+        "Scrittura creativa",
+        "Editing letterario",
+        "Narrativa",
+        "Letteratura per ragazzi",
+        "Sceneggiatura"
+    ],
+    "sameAs": [
+        "https://www.amazon.com/author/jacopodonati",
+        "https://www.goodreads.com/jacopodonati",
+        "https://www.simonandschuster.ca/authors/Jacopo-Donati/264916287"
+    ]
+}

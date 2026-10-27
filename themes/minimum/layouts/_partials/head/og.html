@@ -1,0 +1,6 @@
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}{{ .Params.og_type }}{{ end }}">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Jacopo Donati">
+  <meta property="og:title" content="{{ if isset .Params "og_title" }}{{ .Params.og_title }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ if isset .Params "og_description" }}{{ .Params.og_description }}{{ else }}{{ .Description }}{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">

@@ -1,0 +1,23 @@
+{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Editing di manoscritti e narrativa",
+        "provider": {
+            "@type": "Person",
+            "@id": "https://www.jacopodonati.it/#person",
+            "name": "Jacopo Donati"
+        },
+        "description": "Servizio di editing letterario professionale per romanzi e manoscritti di narrativa.",
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceType": "https://schema.org/ListPrice",
+            "minPrice": "4.50",
+            "maxPrice": "9.00",
+            "unitCode": "C62"
+            }
+        },
+        "url": "https://www.jacopodonati.it/editing/"
+    }

@@ -1,0 +1,210 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Book",
+        "name": "Esploratori coraggiosi",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2026-09-14",
+        "numberOfPages": "64",
+        "image": "https://www.jacopodonati.it/img/libri/9788854422315/full.png"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "CreativeWork",
+        "name": "Focus Pico",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2026-03-06",
+        "numberOfPages": "34",
+        "image": "https://www.jacopodonati.it/img/libri/9771973642009/full.png",
+        "url": "https://www.focusjunior.it/"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Book",
+        "name": "Creature Fantastiche. Storie e leggende dal mondo",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2025-11-07",
+        "numberOfPages": "64",
+        "image": "https://www.jacopodonati.it/img/libri/9788854060708/full.png",
+        "url": "https://www.whitestar.it/product-page/creature-fantastiche-storie-e-leggende-dal-mondo/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "White Star"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Book",
+        "name": "Black",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2025-04-01",
+        "numberOfPages": "96",
+        "image": "https://www.jacopodonati.it/img/libri/9788866568810/full.png",
+        "url": "https://www.edizioniel.com/prodotto/black-9788866568810/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Edizioni EL"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Book",
+        "name": "Il mondo è da rifare",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2023-01-24",
+        "numberOfPages": "116",
+        "image": "https://www.jacopodonati.it/img/libri/9788833645421/full.png",
+        "url": "https://www.pendragon.it/catalogo/produzione-varia/varia/il-mondo-è-da-rifare-detail.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pendragon"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Book",
+        "name": "Misteri e manicaretti a Bologna",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2019-06-06",
+        "numberOfPages": "250",
+        "image": "https://www.jacopodonati.it/img/libri/9788893470636/full.png",
+        "url": "https://www.librisumisura.com/products/misteri-e-manicaretti-a-bologna"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Book",
+        "name": "Misteri e manicaretti con Pellegrino Artusi",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2018-03-10",
+        "numberOfPages": "192",
+        "image": "https://www.jacopodonati.it/img/libri/9788893470551/full.png",
+        "url": "https://www.librisumisura.com/products/copia-del-misteri-e-manicaretti-con-pellegrino-artusi"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Book",
+        "name": "Storie maledette - Brividi d'estate",
+        "editor": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2015-06-01",
+        "numberOfPages": "94",
+        "image": "https://www.jacopodonati.it/img/libri/storie-maledette/full.png"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Book",
+        "name": "Poche storie, siamo artigiani",
+        "editor": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2014-12-01",
+        "numberOfPages": "125",
+        "image": "https://www.jacopodonati.it/img/libri/9788865985878/full.png",
+        "url": "https://www.pendragon.it/catalogo/produzione-varia/varia/poche-storie,-siamo-artigiani-detail.html",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Pendragon"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Book",
+        "name": "Esercizi di riscaldamento",
+        "editor": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2014-06-05",
+        "numberOfPages": "150",
+        "image": "https://www.jacopodonati.it/img/libri/9788861457133/full.png",
+        "url": "https://www.amazon.it/Esercizi-riscaldamento-J-Donati/dp/8861457134"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "Book",
+        "name": "Raccontami una storia",
+        "author": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2013-01-01",
+        "numberOfPages": "55",
+        "image": "https://www.jacopodonati.it/img/libri/raccontami-una-storia/full.png"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "Book",
+        "name": "La casa in testa",
+        "editor": {
+          "@type": "Person",
+          "name": "Jacopo Donati"
+        },
+        "datePublished": "2012-01-01",
+        "numberOfPages": "237",
+        "image": "https://www.jacopodonati.it/img/libri/la-casa-in-testa/full.png"
+      }
+    }
+  ]
+}

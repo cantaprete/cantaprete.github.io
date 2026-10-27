@@ -1,0 +1,8 @@
+baseURL = 'https://www.jacopodonati.it/'
+locale = 'it-it'
+title = 'Jacopo Donati'
+
+theme = 'minimum'
+
+[security]
+allowContent = ['text/html', 'text/markdown']

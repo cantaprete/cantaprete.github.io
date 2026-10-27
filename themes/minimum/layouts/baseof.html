@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}" dir="{{ or site.Language.Direction `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <header>
+    {{ partial "header.html" . -}}
+  </header>
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
+  {{- if not .IsHome }}
+  <nav id="bottom-menu">
+      <a href="/">&lsaquo; torna alla pagina iniziale</a>
+  </nav>
+  {{- end }}
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>

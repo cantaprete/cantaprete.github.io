@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-reg.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-ita.woff2);
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-med.woff2);
+    font-display: swap;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Woz Pro";
+    src: url(/fonts/sfp-seb.woff2);
+    font-display: swap;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Woz Mono";
+    src: url(/fonts/sfm-reg.woff2);
+    font-display: swap;
+}

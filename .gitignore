@@ -6,6 +6,7 @@ public/
 /resources/
 
 .DS_Store
+_old
 
 node_modules
 package.json
