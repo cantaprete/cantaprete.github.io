@@ -1,17 +1,3 @@
 {{ if isset .Params "js" }}
-  {{- with resources.Get (printf "js/%s.js" .Params.js) }}
-    {{- $opts := dict
-      "minify" (cond hugo.IsDevelopment false true)
-      "sourceMap" (cond hugo.IsDevelopment "linked" "none")
-    }}
-    {{- with . | js.Build $opts }}
-      {{- if hugo.IsDevelopment }}
-        <script src="{{ .RelPermalink }}"></script>
-      {{- else }}
-        {{- with . | fingerprint }}
-          <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></script>
-        {{- end }}
-      {{- end }}
-    {{- end }}
-  {{- end }}
+  <script src="/js/{{ .Params.js }}.js"></script>
 {{- end }}
