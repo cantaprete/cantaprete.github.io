@@ -6,8 +6,7 @@ subtitle: ""
 description: ""
 og_description: ""
 category: editing
-json: ""
-js: ""
+json_ld: ""
 lastupdate: "2026-10-28T09:47:28Z"
 draft: true
 ---

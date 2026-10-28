@@ -7,7 +7,6 @@ description: "Come funziona il mio servizio di editing: tariffe, tempi di lavora
 og_description: "Tariffe, tempi e modalità del mio servizio di editing di manoscritti."
 category: "editing"
 json_ld: "editing"
-custom_js: "editing"
 lastUpdate: "2026-10-25T15:32:40Z"
 ---
 
