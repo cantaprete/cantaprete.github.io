@@ -1,4 +1,4 @@
-{{ with .Params.json }}
+{{ with .Params.json_ld }}
   {{ $file := printf "data/json-ld/%s.json" . }}
   {{ with readFile $file }}
 <script type="application/ld+json">
