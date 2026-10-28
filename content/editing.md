@@ -6,8 +6,8 @@ subtitle: "Cose da sapere prima di iniziare un percorso di editing con me."
 description: "Come funziona il mio servizio di editing: tariffe, tempi di lavorazione e modalità per inviare un manoscritto."
 og_description: "Tariffe, tempi e modalità del mio servizio di editing di manoscritti."
 category: "editing"
-json: "editing"
-js: "editing"
+json: editing
+js: editing
 lastUpdate: "2026-10-25T15:32:40Z"
 ---
 
