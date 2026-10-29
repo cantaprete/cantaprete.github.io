@@ -2,11 +2,13 @@
 title: "Editing di manoscritti e consulenze editoriali"
 head_title: "Editing manoscritti, racconti e romanzi: costi e tempi"
 og_title: "Editing manoscritti, racconti e romanzi: costi e tempi"
+home_title: "Cose da sapere prima di iniziare un percorso di editing"
 subtitle: "Cose da sapere prima di iniziare un percorso di editing con me."
 description: "Come funziona il mio servizio di editing: tariffe, tempi di lavorazione e modalità per inviare un manoscritto."
 og_description: "Tariffe, tempi e modalità del mio servizio di editing di manoscritti."
-category: "editing"
+categories: ["editing"]
 json_ld: "editing"
+weight: 1
 lastUpdate: "2026-10-25T15:32:40Z"
 ---
 

@@ -26,7 +26,7 @@ html {
 body {
     color: var(--foreground);
     background-color: var(--background);
-    font-family: "Woz Pro", serif;
+    font-family: "SF Pro", serif;
     padding: 1rem;
 }
 
@@ -49,7 +49,7 @@ section {
 }
 
 .mono {
-    font-family: "Woz Mono", monospace;
+    font-family: "SF Mono", monospace;
     padding: 0 .1rem;
 }
 
@@ -79,7 +79,7 @@ section {
 }
 
 .mail {
-    font-family: "Woz Mono", monospace;
+    font-family: "SF Mono", monospace;
     padding: 0 .4rem;
 }
 

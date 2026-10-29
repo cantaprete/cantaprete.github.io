@@ -1,3 +1,26 @@
 {{ define "main" }}
+  {{ with site.GetPage "/home/bio" }}
+  <section class="bio">
+    {{ .Content }}
+  </section>
+  {{ end }}
+  {{ with site.GetPage "/home/servizi" }}
+  <section class="servizi">
+    {{ .Content }}
+    <h2 class="ser-editing evidenziato">Editing</h2>
+    <ul>
+        {{ range where site.RegularPages "Params.categories" "intersect" (slice "editing") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Params.home_title }}</a></li>
+        {{ end }}
+    </ul>
+
+    <h2 class="ser-schede evidenziato">Schede di lettura</h2>
+    <p>Tramite la Fondazione Bottega Finzioni:</p>
+    <ul>
+        <li><a href="https://www.bottegafinzioni.com/it/?id=consulenze-narrative">Scheda di lettura e accompagnamento nella scrittura</a> (quest’ultimo è indicato nella pagina come servizio di editing)</li>
+        <li><a href="https://www.bottegafinzioni.com/it/?id=pronto-soccorso-narrativo">Pronto Soccorso Narrativo</a>, ossia una consulenza gratuita della durata di mezz’ora. <span class="small">(Spesso le faccio io, ma non sempre.)</span></li>
+    </ul>
+  </section>
+  {{ end }}
   {{ .Content }}
 {{ end }}

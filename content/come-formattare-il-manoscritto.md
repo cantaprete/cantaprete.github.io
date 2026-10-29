@@ -1,12 +1,14 @@
 ---
 title: "Come formattare un manoscritto"
 head_title: ""
+home_title: "Come formattare il manoscritto"
 og_title: ""
 subtitle: ""
 description: ""
 og_description: ""
-category: editing
+categories: ["editing"]
 json_ld: ""
+weight: 3
 lastupdate: "2026-10-28T09:47:28Z"
 draft: true
 ---

@@ -1,10 +1,12 @@
 ---
 title: "Come fare la sinossi del tuo manoscritto"
+home_title: "Come preparare la sinossi"
 subtitle: "Come preparare una sinossi che non faccia piangere l’editore (o l’agente)."
 description: "Come scrivere una sinossi che possa essere inviata ad agenti letterari ed editori."
-category: editing
+categories: ["editing"]
 json_ld: "sinossi"
 og_type: "article"
+weight: 2
 lastupdate: "2026-10-25T19:43:05Z"
 ---
 
