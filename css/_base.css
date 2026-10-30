@@ -1,48 +1,48 @@
 @font-face {
-    font-family: "Woz Pro";
+    font-family: "SFPro";
     src: url(/fonts/sfp-reg.woff2);
     font-display: swap;
 }
 
 @font-face {
-    font-family: "Woz Pro";
+    font-family: "SFPro";
     src: url(/fonts/sfp-ita.woff2);
     font-display: swap;
     font-style: italic;
 }
 
 @font-face {
-    font-family: "Woz Pro";
+    font-family: "SFPro";
     src: url(/fonts/sfp-med.woff2);
     font-display: swap;
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "Woz Pro";
+    font-family: "SFPro";
     src: url(/fonts/sfp-seb.woff2);
     font-display: swap;
     font-weight: 600;
 }
 
 @font-face {
-    font-family: "Woz Mono";
+    font-family: "SFMono";
     src: url(/fonts/sfm-reg.woff2);
     font-display: swap;
 }
 
 :root {
-    --background: white;
-    --foreground: black;
-    --accent: #0000EE;
+    --background: rgb(251, 250, 249);
+    --foreground: rgb(43, 42, 42);
+    --accent: rgb(0, 83, 171);
     --max-width-text: 60ch;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: rgb(43, 42, 42);
-        --foreground: white;
-        --accent: #FFFF11;
+        --foreground: rgb(251, 250, 249);
+        --accent: rgb(255, 239, 17);
     }
 }
 
@@ -53,7 +53,7 @@ html {
 body {
     color: var(--foreground);
     background-color: var(--background);
-    font-family: "Woz Pro", serif;
+    font-family: "SFPro", serif;
     padding: 1rem;
 }
 
@@ -104,10 +104,33 @@ h2 {
 main {
     max-width: var(--max-width-text);
     line-height: 1.6;
+    margin: 0 auto
+}
+
+#back-home {
+    float: left;
+    margin-top: 0;
+    margin-right: 4rem;
+    margin-bottom: 2rem
+}
+
+#back-home a {
+    color: var(--foreground);
+    text-decoration: none
+}
+
+#back-home a:hover {
+    text-decoration: underline
+}
+
+@media(max-width:680px) {
+    #back-home {
+        float: none
+    }
 }
 
 .mono {
-    font-family: "Woz Mono", monospace;
+    font-family: "SFMono", monospace;
     padding: 0 .1rem;
 }
 
