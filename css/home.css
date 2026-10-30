@@ -1,4 +1,4 @@
-@import url(_minimum.css);
+@import url(_base.css);
 
 :root {
     --editing-bg-color: #faebd7;
@@ -22,26 +22,6 @@
 
 section {
     margin-bottom: 2rem;
-}
-
-.cta {
-    font-size: .8rem;
-    text-align: right;
-    margin: 0 3rem;
-    text-transform: lowercase;
-}
-
-.cta a {
-    color: var(--foreground);
-    text-decoration: none;
-}
-
-.cta a::before {
-    content: "[ ";
-}
-
-.cta a::after {
-    content: " ]";
 }
 
 .evidenziato {
