@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "placeholders": {
+    "judgment": "Da compilare",
+    "line": "Da compilare"
+  },
+  "examplesNote": "Esempi fittizi solo illustrativi: copiali in hexagrams e sostituisci i testi prima di usarli.",
+  "examples": {
+    "1": {
+      "judgment": [
+        { "text": "ESEMPIO FITTIZIO: La soglia si apre quando il passo trova il suo ritmo. " },
+        { "text": "soglia", "termId": "termine-esempio" },
+        { "text": " e " },
+        { "text": "passo", "termId": "termine-esempio-2" },
+        { "text": " sono termini dimostrativi." }
+      ],
+      "lines": {
+        "1": "ESEMPIO FITTIZIO: Un primo segno appare sulla strada.",
+        "2": "ESEMPIO FITTIZIO: La lanterna illumina il passo vicino.",
+        "3": "ESEMPIO FITTIZIO: Il vento cambia prima della sera.",
+        "4": "ESEMPIO FITTIZIO: Una pausa chiarisce la direzione.",
+        "5": "ESEMPIO FITTIZIO: La porta si apre senza forzarla.",
+        "6": "ESEMPIO FITTIZIO: Il viaggio termina dove era cominciato."
+      }
+    },
+    "2": {
+      "judgment": "ESEMPIO FITTIZIO: Una tazza vuota attende l'acqua della fonte.",
+      "lines": {
+        "1": "ESEMPIO FITTIZIO: La fonte nasce sotto la pietra.",
+        "2": "ESEMPIO FITTIZIO: L'acqua trova una fessura sottile.",
+        "3": "ESEMPIO FITTIZIO: Il ruscello raccoglie le gocce.",
+        "4": "ESEMPIO FITTIZIO: Il ponte regge un passo alla volta.",
+        "5": "ESEMPIO FITTIZIO: La corrente raggiunge il campo.",
+        "6": "ESEMPIO FITTIZIO: La sorgente riposa sotto la neve."
+      }
+    }
+  },
+  "hexagrams": {}
+}

@@ -1,0 +1,246 @@
+@font-face {
+    font-family: SF Pro;
+    src: url("/fonts/sfp-reg.woff2");
+    font-display: swap
+}
+
+@font-face {
+    font-family: SF Pro;
+    src: url("/fonts/sfp-ita.woff2");
+    font-display: swap;
+    font-style: italic
+}
+
+@font-face {
+    font-family: SF Pro;
+    src: url("/fonts/sfp-med.woff2");
+    font-display: swap;
+    font-weight: 500
+}
+
+@font-face {
+    font-family: SF Pro;
+    src: url("/fonts/sfp-seb.woff2");
+    font-display: swap;
+    font-weight: 600
+}
+
+@font-face {
+    font-family: SF Mono;
+    src: url("/fonts/sfm-reg.woff2");
+    font-display: swap
+}
+
+header {
+    margin-top: 1rem;
+    margin-bottom: 10rem
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem
+}
+
+header p {
+    font-size: .8rem
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    font-weight: 500
+}
+
+#back-home {
+    float: left;
+    margin-top: 0;
+    margin-right: 4rem;
+    margin-bottom: 2rem
+}
+
+#back-home a {
+    color: var(--foreground);
+    text-decoration: none
+}
+
+#back-home a:hover {
+    text-decoration: underline
+}
+
+@media(max-width:680px) {
+    #back-home {
+        float: none
+    }
+}
+
+footer {
+    font-size: .8rem;
+    margin: 4rem 0
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--foreground)
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--accent)
+}
+
+:root {
+    --background: rgb(251, 250, 249);
+    --foreground: rgb(43, 42, 42);
+    --accent: #0053ab;
+    --max-width-text: 60ch;
+
+    --editing-bg-color: #faebd7;
+    --schede-bg-color: #f1fad7;
+    --corsi-bg-color: #d7ebfa;
+    --editing-fg-color: #885410;
+    --schede-fg-color: #566f0c;
+    --corsi-fg-color: #0c586f
+}
+
+@media(prefers-color-scheme:dark) {
+    :root {
+        --background: rgb(43, 42, 42);
+        --foreground: rgb(251, 250, 249);
+        --accent: #ffef11;
+
+        --editing-fg-color: #faebd7;
+        --schede-fg-color: #f1fad7;
+        --corsi-fg-color: #d7ebfa;
+        --editing-bg-color: #885410;
+        --schede-bg-color: #566f0c;
+        --corsi-bg-color: #0c586f
+    }
+}
+
+.evidenziato {
+    padding: 0 .4rem;
+    text-wrap: nowrap
+}
+
+.ser-editing {
+    background-color: var(--editing-bg-color);
+    color: var(--editing-fg-color)
+}
+
+.ser-schede {
+    background-color: var(--schede-bg-color);
+    color: var(--schede-fg-color)
+}
+
+.ser-corsi {
+    background-color: var(--corsi-bg-color);
+    color: var(--corsi-fg-color)
+}
+
+:root {
+}
+
+@media(prefers-color-scheme:dark) {
+    :root {
+    }
+}
+
+html {
+    font-size: 18px
+}
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    font-family: SF Pro, serif;
+    padding: 1rem
+}
+
+a {
+    color: var(--accent)
+}
+
+strong {
+    font-weight: 580
+}
+
+main {
+    max-width: var(--max-width-text);
+    line-height: 1.6;
+    margin: 0 auto
+}
+
+section {
+    margin-bottom: 2rem
+}
+
+.mono {
+    font-family: SF Mono, monospace;
+    padding: 0 .1rem
+}
+
+.smallcaps {
+    letter-spacing: .1rem;
+    font-size: .9rem
+}
+
+.small {
+    font-size: .8rem
+}
+
+.right {
+    float: right
+}
+
+#bottom-menu {
+    margin-top: 3rem;
+    font-size: .8rem
+}
+
+.inter {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8rem
+}
+
+.mail {
+    font-family: SF Mono, monospace;
+    padding: 0 .4rem
+}
+
+aside {
+    max-width: 50%;
+    float: right;
+    font-size: .8rem;
+    margin: 0 0 .4rem 1rem
+}
+
+@media(max-width:380px) {
+    aside {
+        max-width: initial;
+        float: initial;
+        margin: 0;
+        font-size: inherit
+    }
+}
+
+#io {
+    width: 200px;
+    float: left;
+    margin: .4rem 1rem .2rem 0
+}
+
+#libreria {
+    display: flex;
+    gap: 1.4rem;
+    align-items: end;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.progetto img {
+    box-shadow: #32325d40 0 2px 5px, #0000004d 0 1px 3px
+}

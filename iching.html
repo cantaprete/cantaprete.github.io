@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>I Ching</title>
+	<meta name="description" content="Tira le monetine. (non è un simulatore di Tangentopoli.)">
+	<meta name="keywords" content="Jacopo Donati, I Ching, iching, Yijing">
+	<meta name="author" content="Jacopo Donati">
+	<link rel="icon" href="/favicon.ico" sizes="48x48">
+	<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+	<meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
+	<link rel="stylesheet" href="/css/iching.css">
+	<script src="/js/iching.js"></script>
+	<link rel="manifest" href="/manifest.json">
+	<link rel="apple-touch-icon" href="/img/iching-apple-touch-icon-180.png">
+</head>
+
+<body id="iching">
+	<div id="container" class="window">
+		<div class="title-bar">
+			<h1 class="title">I Ching</h1>
+		</div>
+		<div class="window-pane">
+			<div id="hor-pan">
+				<div id="hex" class="panel">
+					<div id="line-1" class="line"></div>
+					<div id="line-2" class="line"></div>
+					<div id="line-3" class="line"></div>
+					<div id="line-4" class="line"></div>
+					<div id="line-5" class="line"></div>
+					<div id="line-6" class="line"></div>
+				</div>
+				<div id="controls">
+					<input type="button" value="Lancia" id="throw" class="btn btn-default">
+					<label><span id="res-hex">&nbsp;</span><span id="res-lines"></span></label>
+					<input type="button" value="Reimposta" id="reset" class="btn">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="response" class="nascosto">
+	</div>
+</body>
+</html>
