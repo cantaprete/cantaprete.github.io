@@ -244,3 +244,11 @@ aside {
 .progetto img {
     box-shadow: #32325d40 0 2px 5px, #0000004d 0 1px 3px
 }
+
+svg path {
+    fill: var(--foreground);
+}
+
+.separatore {
+    width: 2rem;
+}
