@@ -1,4 +1,4 @@
-@import url(_minimum.css);
+@import url(_base.css);
 
 @media (prefers-color-scheme: dark) {
     .inter img {
@@ -24,15 +24,17 @@ aside {
     text-align: center;
     font-size: .8rem;
     display: block;
+    margin-bottom: 4rem;
 }
 
 #top-menu ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
     justify-content: center;
-    list-style: none;
-    gap: 1rem;
     letter-spacing: .04rem;
+    list-style: none;
+    padding: 0;
 }
 
 .mail {
