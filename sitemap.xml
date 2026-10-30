@@ -3,41 +3,55 @@
     <url>
         <loc>https://www.jacopodonati.it/index.html</loc>
         <lastmod>2026-10-25T10:26:13Z</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/libri.html</loc>
         <lastmod>2026-10-23T04:58:33Z</lastmod>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/dettami.html</loc>
         <lastmod>2025-03-19T12:48:37Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.2</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/iching.html</loc>
         <lastmod>2025-11-09T12:44:26Z</lastmod>
+        <priority>0.2</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/calcolatore-agende-vetuste.html</loc>
         <lastmod>2025-11-09T12:44:44Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.2</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/use-a-fracking-translator.html</loc>
         <lastmod>2025-11-09T15:37:11Z</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.2</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/guida-sviluppo.html</loc>
         <lastmod>2026-02-12T07:39:23Z</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/editing/</loc>
         <lastmod>2026-10-24T09:52:50Z</lastmod>
+        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/chi-sono/</loc>
         <lastmod>2026-10-25T10:25:54Z</lastmod>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://www.jacopodonati.it/come-fare-la-sinossi/</loc>
         <lastmod>2026-10-25T10:25:54Z</lastmod>
+        <priority>0.8</priority>
     </url>
 </urlset>
